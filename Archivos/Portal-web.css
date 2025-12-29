@@ -420,6 +420,7 @@ nav a:hover::after {
     height: 80px;
   }
 
+
      .search-box,
   nav {
     display: none;
@@ -438,6 +439,7 @@ nav a:hover::after {
   
   .portalweb-hero {
     min-height: 80%;
+    background-image: url('/img/wed.jpeg');
   }
 
   .footer-row {

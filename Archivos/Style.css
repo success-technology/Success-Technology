@@ -654,10 +654,14 @@ nav a:hover::after {
   /* Hamburguesa visible */
   .hamburger {
     font-size: 28px;
-    cursor: pointer;
     display: block;
     margin-left: auto;
     color: rgb(174, 172, 172); 
+  }
+
+    img {
+    width: 100%;
+    height: auto;
   }
 
   /* Menú oculto inicialmente */
@@ -810,7 +814,7 @@ nav a:hover::after {
 
 @media (max-width: 600px) {
   body {
-    font-size: 15px;
+    font-size: 10px;
   }
 
   img {
