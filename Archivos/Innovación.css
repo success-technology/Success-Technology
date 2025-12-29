@@ -140,7 +140,6 @@ nav a:hover::after {
   background-image: url('/img/innovación.png');
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   padding: 8rem 2rem 6rem;
   text-align: center;
   color: var(--white);
@@ -428,6 +427,10 @@ nav a:hover::after {
   header img {
     height: 80px;
   }
+
+  .hero-innovacion {
+    background-attachment: fixed;
+  }
 }
 
 /* Móvil */
@@ -444,6 +447,13 @@ nav a:hover::after {
   header img {
     height: 80px;
   }
+
+  .hero-innovacion {
+    background-position: top center;
+    min-height: 80vh;
+    padding: 6rem 1.5rem;
+  }
+
     .search-box,
   nav {
     display: none;
@@ -464,7 +474,6 @@ nav a:hover::after {
 
   .footer-row {
     flex-direction: column;
-    text-align: center;
   }  
 }
 

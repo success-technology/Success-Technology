@@ -143,7 +143,6 @@ nav a:hover::after {
   background-image: url('/img/perfil.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   color: var(--white);
   padding: 8rem 2rem 6rem;
   text-align: center;
@@ -627,6 +626,10 @@ nav a:hover::after {
     gap: 1rem;
   }
 
+  .hero {
+    background-attachment: fixed;
+  }
+
   img {
     height: 80px;
   }
@@ -649,6 +652,12 @@ nav a:hover::after {
   header img {
     width: 120px;
     height: auto;
+  }
+
+  .hero {
+    background-position: top center;
+    min-height: 80vh;
+    padding: 6rem 1.5rem;
   }
 
   /* Hamburguesa visible */
