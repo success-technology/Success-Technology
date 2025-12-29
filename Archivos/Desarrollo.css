@@ -467,7 +467,7 @@ nav a:hover::after {
     } /* Buscador más compacto */
     
     .process-steps {
-        grid-template-columns: repeat(2, 1fr); /* Cambio de 3 a 2 columnas */
+        grid-template-columns: repeat(1, 1fr); /* Cambio de 3 a 2 columnas */
     }
 
     .hero-dev h1 {
