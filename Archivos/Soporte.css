@@ -1,0 +1,650 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2c5282;
+  --accent-color: #2786de;
+  --dark-blue: #0f2a44;
+  --light-gray: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-300: #cbd5e0;
+  --gray-600: #718096;
+  --gray-800: #2d3748;
+  --white: #ffffff;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --border-color: #e2e8f0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--white);
+}
+
+/* Header corporativo */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+  padding: 1rem 0;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  height: 110px;;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: auto;
+  height: 2.5px;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+/* Buscador */
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 0.9rem;
+  width: 500px;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #333; /* o un tono más oscuro */
+}
+
+.ico{
+  height: 18px;
+  color: white;
+  width: auto;
+}
+
+/* Nuevos estilos para la versión profesional */
+.service-hero{
+    overflow:hidden;
+    padding: 8rem 2rem 4rem;
+    height: auto;
+    color:#fff;
+    text-align:center
+}
+
+.hero-bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    top:0;
+    left:0
+}
+
+.hero-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to bottom,rgba(26,54,93,0.8),rgba(38, 49, 60, 0.95))
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    padding-top:190px
+}
+
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:1rem
+}
+
+.hero-content .subtitle{
+    font-size:1.4rem;
+    max-width:800px;
+    margin:0 auto
+}
+
+.service-intro h2{
+    font-size:2rem;
+    margin: bottom 4px;
+    text-align: center;
+    height: 5vh;
+    padding: 7rem 0;
+}
+
+.service-intro p{
+    font-size:1.1rem;
+    line-height:1.7;
+    color:var(--gray-800);
+
+}
+
+.benefits-grid h2{
+    text-align:center;
+    margin:4rem 0 3rem;
+    font-size:2.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.benefit-card{
+    background:#fff;
+    padding:2rem;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:transform .3s
+}
+
+.benefit-card:hover{
+    transform:translateY(-10px)
+}
+
+.icon-primary{
+    color:var(--primary-color);
+    margin-bottom:1rem
+}
+
+.service-cta-final{
+    background:var(--primary-color);
+    color:#fff;
+    padding:5rem 0;
+    margin: 4rem;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.cta-content{
+    max-width:600px;
+    padding:0 2rem
+}
+
+.cta-content h2{
+    font-size:2.5rem;
+    margin-bottom:1rem
+}
+
+.cta-content p{
+    font-size:1.2rem;
+    margin-bottom:2rem
+}
+
+.cta-buttons a{
+    display:inline-block;
+    margin-right:1rem;
+    margin-bottom:1rem;
+    padding:1rem 2rem;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .3s
+}
+
+.btn-primary{
+    background:#fff;
+    color:var(--primary-color)
+}
+
+.btn-primary:hover{
+    background:#f0f0f0
+}
+
+.btn-secondary{
+    background:transparent;
+    border:2px solid #fff;
+    color:#fff
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,0.1)
+}
+
+.cta-image{
+    position:absolute;
+    right:0;
+    top:0;
+    height:100%;
+    width:45%;
+    object-fit:cover;
+    border-radius:0 12px 12px 0}
+
+/* Footer corporativo */
+.footer {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 3rem 2rem 2rem;
+  font-family: 'Arial', sans-serif; /* O usa tu fuente corporativa */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h3, .footer-col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.footer-col p {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  opacity: 1; /* Ajustado para mejor visibilidad */
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.footer-bottom a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   MEDIA QUERIES PARA TABLES (MAX 1024PX)
+   ========================================= */
+/* TABLET */
+@media (max-width: 1024px) {
+ header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  header img {
+    height: 80px;
+  }
+
+  .service-hero{
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+}
+
+/* =========================================
+   MEDIA QUERIES PARA MÓVIL (MAX 768PX)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. HEADER: Ocultar menú y buscador, posicionar botón retroceso */
+    header {
+        padding: 10px 20px;
+        justify-content: space-between; 
+        height: auto;
+    }
+
+    header img {
+        height: 80px; /* Reducir tamaño del logo en móvil */
+    }
+
+    /* Ocultar navegación y buscador */
+    nav, 
+    .search-box {
+        display: none !important;
+    }
+
+    /* Estilo del botón de retroceso */
+    .back-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: rgb(174, 172, 172);
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+        visibility: visible; 
+    }
+
+    /* 2. TARJETAS (BENEFICIOS): Mostrar de a 2 */
+    .cards {
+        /* Forzamos 2 columnas como pediste */
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    .benefit-card {
+        padding: 1.5rem 1rem; /* Reducir padding interno para que quepa bien */
+    }
+    
+    .benefit-card h3 {
+        font-size: 1rem; /* Ajustar tamaño de letra */
+    }
+    
+    .benefit-card i {
+        font-size: 2em; /* Iconos un poco más pequeños */
+    }
+
+    /* 3. CTA FINAL (IMAGEN CENTRADA) */
+    .service-cta-final {
+        margin: 2rem 1rem; /* Margen externo reducido */
+        display: flex;
+        flex-direction: column; /* Apilar contenido verticalmente */
+        transform: none; /* Quitar el scale del desktop */
+        padding-bottom: 0; /* La imagen irá al fondo */
+        height: 90%;
+    }
+
+    .cta-content {
+        padding: 3rem 1.5rem 2rem;
+        text-align: center; /* Texto centrado */
+        max-width: 100%;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-buttons a {
+        margin-right: 0;
+        width: 100%; /* Botones ancho completo */
+        text-align: center;
+    }
+
+    .cta-image {
+        position: relative; /* Ya no es absoluta */
+        width: 100%;
+        height: 250px; /* Altura fija para la imagen */
+        object-fit: cover;
+        border-radius: 0 0 12px 12px; /* Redondear solo abajo */
+    }
+
+/* Contenedor del hero */
+    .service-hero {
+        min-height: auto; /* suficiente sin dejar hueco */
+        padding: 1rem;
+    }
+
+    /* Imagen de fondo */
+    .hero-bg {
+        width: 100%;
+        max-height: 50%;
+    }
+
+    /* Capa oscura */
+    .hero-overlay {
+      max-height: 50%;
+             background:linear-gradient(to bottom,rgba(26,54,93,0.8),rgba(38, 49, 60, 0.95))
+    }
+
+    /* Contenido centrado */
+    .hero-content {
+        position:absolute;
+        left:100%;
+        transform: translate(-100%, -100%);
+        color: white;
+        width: 100%;
+        padding-bottom: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.4rem;
+        text-align:center;
+    }
+
+    /* INTRO */
+    .service-intro {
+        padding: 2px 1px 1px 1px;
+        margin: 2px;
+    }
+
+    .service-intro h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .service-intro p {
+        text-align: justify;
+        margin-top: 1px;
+        padding: 2px;
+    }
+
+
+    /* 4. FOOTER (CENTRADO) */
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+}
+
+/* --- TABLETS PEQUEÑAS / MÓVILES GRANDES (max-width: 850px) --- */
+@media (max-width: 850px) {
+    .nav-menu ul {
+     gap: 10px;
+    }
+
+    .nav-menu a {
+      padding: 0.5rem;
+      font-size: 0.9rem; 
+    }
+
+    .search-box {
+       display: none; 
+      } /* Ocultar buscador si no cabe */
+
+       /* Ajustes generales de texto y márgenes */
+    .service-hero {
+        padding: 24rem 2rem 2rem ; 
+        min-height: 70%;
+    }
+
+    .hero-bg{
+      height: 70%;
+    }
+
+    .hero-overlay{
+      height: 70%;
+    }   
+}
+
+/* ================================
+   DESKTOP (MENÚ NORMAL)
+================================ */
+@media (min-width: 769px) {
+
+  /* Buscador visible en desktop */
+  .search-box {
+    display: flex;
+    max-width: 350px;
+  }
+
+  .search-box input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ccc;
+  }
+
+  .search-box button {
+    padding: 8px 12px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: #103e64;
+    color: #fff;
+  }
+
+  .cta-content {
+    padding: 3rem 1.5rem 2rem;
+    text-align: center; /* Texto centrado */
+    max-width: 50%;
+  }
+
+   /* Oculta retroceder */
+  .back-button {
+    display: none; 
+  }
+}
