@@ -544,11 +544,6 @@ nav a:hover::after {
         display: block; /* Mostrar botón atrás */
     }
 
-    /* 2. TARJETAS EN 1 COLUMNAS (Requerimiento) */
-    .dev-grid {
-        grid-template-columns: 1fr 1fr; /* Forzar 1 columnas */
-        gap: 10px; /* Reducir espacio */
-    }
 
     .dev-card {
         padding: 1rem; /* Padding reducido */
