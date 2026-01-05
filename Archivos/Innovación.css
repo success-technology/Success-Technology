@@ -137,10 +137,8 @@ nav a:hover::after {
 
 /* Hero Innovación */
 .hero-innovacion {
-  background-image: url('/img/innovación.png');
-  background-position: center;
-  background-size: cover;
-  padding: 8rem 2rem 6rem;
+  background: url("/img/innovación.png") center/cover no-repeat;
+  padding: 120px 24px;
   text-align: center;
   color: var(--white);
   margin-top: 120px; /* separación del header fijo */

@@ -137,11 +137,9 @@ nav a:hover::after {
 
 
 .hero {
-  background-image: url('/img/consultoria.png');
-  background-position: center;
-  background-size: cover;
+  background: url("/img/consultoria.png") center/cover no-repeat;
   color: var(--white);
-  padding: 8rem 2rem 4rem;
+  padding: 120px 24px;
   text-align: center;
   margin-top: 70px;
   min-height: 60vh;

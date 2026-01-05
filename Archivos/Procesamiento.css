@@ -144,11 +144,9 @@ nav a:hover::after {
 }
 
 .hero-section {
-    background-image: url('/img/datos.jpg');
-    background-position: center;
-    background-size: cover;
+    background: url("/img/datos.jpg") center/cover no-repeat;
     color: white;
-    padding: 100px 0 80px;
+    padding: 120px 24px;
     text-align: center;
     margin-top: 70px;
     min-height: 98vh;

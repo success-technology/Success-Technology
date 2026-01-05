@@ -141,7 +141,7 @@ nav a:hover::after {
 
 .hero-dev {
   background: linear-gradient(rgba(15,42,68,0.7), rgba(15,42,68,0.7)), url("/img/Consultiria/software.webp") center/cover no-repeat;
-  padding: 10rem 2rem;
+  padding: 120px 24px;
   text-align: center;
   color: white;
   margin-top: 110px;

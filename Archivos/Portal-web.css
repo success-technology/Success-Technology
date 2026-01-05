@@ -138,10 +138,8 @@ nav a:hover::after {
 /* --- ESTILO PORTALES WEB --- */
 
 .portalweb-hero {
-    background-image: url('/img/wed.jpeg');
-    background-position: center;
-    background-size: cover;
-    padding: 8rem 2rem 6rem;
+    background: url("/img/wed.jpeg") center/cover no-repeat;
+   padding: 120px 24px;
     text-align: center;
     color: white;
     margin-top: 120px; /* por el header fijo */

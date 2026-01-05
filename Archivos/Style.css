@@ -140,11 +140,9 @@ nav a:hover::after {
 
 /* Hero section profesional */
 .hero {
-  background-image: url('/img/perfil.jpg');
-  background-size: cover;
-  background-position: center;
+  background: url("/img/perfil.jpg") center/cover no-repeat;
   color: var(--white);
-  padding: 8rem 2rem 6rem;
+ padding: 120px 24px;
   text-align: center;
   margin-top: 70px;
   min-height: 120vh;
