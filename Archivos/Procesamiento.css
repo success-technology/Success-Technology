@@ -456,10 +456,6 @@ nav a:hover::after {
   .back-button {
     display: none;
   }
-
-  .hero-section{
-     background-attachment: fixed;
-  }
 }
 
 /* --- MOVILES (max-width: 768px) --- */
@@ -475,12 +471,6 @@ nav a:hover::after {
 
   header img {
     height: 80px;
-  }
-
-   .hero-section{
-     background-position: top center;
-     min-height: 80vh;
-     padding: 6rem 1.5rem;
   }
 
   .search-box,
@@ -530,11 +520,6 @@ nav a:hover::after {
 
     .footer-row {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .social-links {
-        align-items: center;
     }
     
     .footer-col {

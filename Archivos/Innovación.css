@@ -426,9 +426,6 @@ nav a:hover::after {
     height: 80px;
   }
 
-  .hero-innovacion {
-    background-attachment: fixed;
-  }
 }
 
 /* Móvil */
@@ -444,12 +441,6 @@ nav a:hover::after {
 
   header img {
     height: 80px;
-  }
-
-  .hero-innovacion {
-    background-position: top center;
-    min-height: 80vh;
-    padding: 6rem 1.5rem;
   }
 
     .search-box,

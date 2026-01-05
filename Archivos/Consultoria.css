@@ -355,10 +355,6 @@ nav a:hover::after {
     gap: 1rem;
   }
 
-  .hero {
-    background-attachment: fixed;
-  }
-
   header img {
     height: 80px;
   }
@@ -380,12 +376,6 @@ nav a:hover::after {
 
   header img {
     height: 80px;
-  }
-
-  .hero {
-    background-position: top center;
-    min-height: 80vh;
-    padding: 6rem 1.5rem;
   }
 
   .search-box,

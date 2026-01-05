@@ -401,9 +401,6 @@ nav a:hover::after {
     height: 80px;
   }
 
-  .portalweb-hero{
-    background-attachment: fixed;
-  }
 }
 
 /* --- MOVILES (max-width: 768px) --- */
@@ -437,16 +434,10 @@ nav a:hover::after {
     padding-right: 1rem;
   }
 
-  
-  .portalweb-hero {
-   background-position: top center;
-    min-height: 80vh;
-    padding: 6rem 1.5rem;
-  }
+
 
   .footer-row {
     flex-direction: column;
-    text-align: center;
   }  
 }
 
