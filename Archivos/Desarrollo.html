@@ -12,13 +12,26 @@
  <header>
    <img src="/img/Modern Professional Technology Logo.jpg" alt="titulo">
 
-   <!-- Boton retroceder -->
-        <a href="/index.html" class="back-button mobile-only">⬅</a>
+      <!-- menú móvil -->
+     <nav class="menuMovil">
+        <button class="hamburguesa" id="hamburguesa"> ☰ </button>
+        <ul class="navmenu" id="navmenu">
+          <li><a href="/index.html#inicio">Inicio</a></li>
+          
+          <li class="dropdown">
+            <button class="submenu-btn" id="submenu-btn">Más servicios ▼</button>
+            <ul class="submenu" id="submenu">
+              <li><a href="/Archivos/Soporte-TI.html">Sercicios TI</a></li>
+              <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de datos</a></li>
+              <li><a href="/Archivos/Portal-web.html">Portal web</a></li>
+              <li><a href="/Archivos/Innovación.html">Innovación</a></li>
+              <li><a href="/Archivos/Consultoria.html">Consultoria</a></li>
+            </ul>
+          </li>
 
-    <form class="search-box">
-      <input type="text "  placeholder="Buscar..."/>
-      <button type="submit"><img class="ico" src="/img/user-search.svg" alt="titulo"></button>
-    </form>
+          <li><a href="/index.html#contact-section">Contacto</a></li>
+        </ul>
+      </nav>
 
     <nav class="nav-menu" id="nav-menu">
       <ul>
@@ -176,6 +189,45 @@
       <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos de Uso</a></p>
     </div>
   </div>
-</footer>   
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburguesa = document.getElementById("hamburguesa");
+    const navmenu = document.getElementById("navmenu");
+    const submenuBtn = document.getElementById("submenu-btn");
+    const submenu = document.getElementById("submenu");
+
+    // Verificar que los elementos existen para evitar errores en consola
+    if (hamburguesa && navmenu) {
+        hamburguesa.addEventListener("click", () => {
+            navmenu.classList.toggle("active");
+            
+            const isOpen = navmenu.classList.contains("active");
+            hamburguesa.innerHTML = isOpen ? "✕" : "☰";
+            // Corregido: 'hamburguesa' en lugar de 'amburger' y 'expanded' en lugar de 'expandad'
+            hamburguesa.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+    }
+
+    if (submenuBtn && submenu) {
+        submenuBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            submenu.classList.toggle("show");
+        });
+    }
+
+    // Cerrar menú al hacer click en links (excepto el botón de submenú)
+    const links = document.querySelectorAll(".navmenu a:not(.submenu-btn)");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            navmenu.classList.remove("active");
+            hamburguesa.innerHTML = "☰";
+        });
+    });
+});
+</script>
+
 </body>
 </html>

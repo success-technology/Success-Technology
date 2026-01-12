@@ -16,14 +16,27 @@
        
           <img src="/img/Modern Professional Technology Logo.jpg" alt="Success Technology">
      
+             <!-- menú móvil -->
+     <nav class="menuMovil">
+        <button class="hamburguesa" id="hamburguesa"> ☰ </button>
+        <ul class="navmenu" id="navmenu">
+          <li><a href="/index.html#inicio">Inicio</a></li>
+          
+          <li class="dropdown">
+            <button class="submenu-btn" id="submenu-btn">Más servicios ▼</button>
+            <ul class="submenu" id="submenu">
+              <li><a href="/Archivos/Portal-web.html">Portal web</a></li>
+              <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de datos</a></li>
+              <li><a href="/Archivos/Innovación.html">Innovación</a></li>
+              <li><a href="/Archivos/Desarrollo.html">Desarrollo de software</a></li>
+              <li><a href="/Archivos/Consultoria.html">Consultoria</a></li>
+            </ul>
+          </li>
 
-        <!-- Boton retroceder -->
-        <a href="/index.html" class="back-button mobile-only">⬅</a>
-
-        <form class="search-box">
-            <input type="text" placeholder="Buscar..."/>
-            <button type="submit"><img class="ico" src="/img/user-search.svg" alt="Buscar"></button>
-        </form>
+          <li><a href="/index.html#contact-section">Contacto</a></li>
+        </ul>
+      </nav>
+      
         <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="/index.html#Inicio">Inicio</a></li>
@@ -37,17 +50,13 @@
     <!-- CONTENIDO PRINCIPAL MEJORADO -->
     <main>
         <section class="service-page">
-            <div class="container">
-
                 <!-- Hero con imagen de fondo -->
-                <div class="service-hero">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Soluciones TI empresariales" class="hero-bg">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content">
+                <div class="service-hero"> 
                         <h1>Servicios TI Especializados</h1>
-                        <p class="subtitle">Transformación digital estratégica que impulsa crecimiento sostenible y ventaja competitiva</p>
-                    </div>
+                        <p class="subtitle">Transformación digital estratégica que impulsa crecimiento sostenible y ventaja competitiva</p>                
                 </div>
+
+                <div class="container">
 
                 <!-- Introducción refinada -->
                 <div class="service-intro">
@@ -152,5 +161,44 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburguesa = document.getElementById("hamburguesa");
+    const navmenu = document.getElementById("navmenu");
+    const submenuBtn = document.getElementById("submenu-btn");
+    const submenu = document.getElementById("submenu");
+
+    // Verificar que los elementos existen para evitar errores en consola
+    if (hamburguesa && navmenu) {
+        hamburguesa.addEventListener("click", () => {
+            navmenu.classList.toggle("active");
+            
+            const isOpen = navmenu.classList.contains("active");
+            hamburguesa.innerHTML = isOpen ? "✕" : "☰";
+            // Corregido: 'hamburguesa' en lugar de 'amburger' y 'expanded' en lugar de 'expandad'
+            hamburguesa.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+    }
+
+    if (submenuBtn && submenu) {
+        submenuBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            submenu.classList.toggle("show");
+        });
+    }
+
+    // Cerrar menú al hacer click en links (excepto el botón de submenú)
+    const links = document.querySelectorAll(".navmenu a:not(.submenu-btn)");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            navmenu.classList.remove("active");
+            hamburguesa.innerHTML = "☰";
+        });
+    });
+});
+</script>
+
 </body>
 </html>

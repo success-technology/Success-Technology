@@ -73,7 +73,7 @@ nav a {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -98,45 +98,19 @@ nav a:hover::after {
   width: 80%;
 }
 
-/* Buscador */
-.search-box {
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  
+.menuMovil {
+  display: none;
 }
 
-.search-box input {
-  padding: 6px 10px;
-  border: 2px solid var(--border-color);
-  border-radius: 20px 0 0 20px;
-  outline: none;
-  font-size: 0.9rem;
-  width: 500px;
-}
-
-.search-box button {
-  padding: 6px 10px;
-  border: none;
-  background: var(--primary-color);
-  color: white;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.search-box button:hover {
-  background: #333; /* o un tono más oscuro */
-}
-
-.ico{
-  height: 18px;
-  color: white;
-  width: auto;
-}
-
-
-/* ==== ESTILOS ESPECÍFICOS PARA PROCESAMIENTO DE DATOS ==== */
+  .hamburguesa {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1100;
+    position: relative;
+  }
 
 .procesamiento-main {
     margin-top: 120px; /* compensa el header fijo */
@@ -144,7 +118,7 @@ nav a:hover::after {
 }
 
 .hero-section {
-    background: url("/img/datos.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/datos.jpg") center/cover no-repeat;
     color: white;
     padding: 120px 24px;
     text-align: center;
@@ -478,33 +452,95 @@ nav a:hover::after {
     display: none;
   }
 
-
-  .back-button {
+      .menuMovil {
     display: block;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    margin-left: auto;
-    padding-right: 1rem;
   }
 
-    /* 2. Tarjetas en 2 columnas (Requerimiento específico) */
+.navmenu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    clip-path: circle(0px at 90% -10%); 
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.navmenu.active {
+    clip-path: circle(1200px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .navmenu li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+
+  .navmenu.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navmenu a {
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+    .submenu-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: none;
+      color: var(--white);
+      border: none;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 15px 0;
+      cursor: pointer;
+  }
+
+  /* SUBMENÚ (Más servicios) */
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center
+  }
+
+.submenu.show {
+    display: block;
+  }
+
+  .submenu a {
+    font-size: 1,1rem;
+    color: var(--gray-300);
+  }
+   
     .cards-grid {
-        grid-template-columns: 1fr; /* Fuerza 2 columnas */
-        gap: 1rem; /* Espacio más reducido */
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
     }
 
     .card {
-        padding: 1rem; /* Menos padding interno */
+        padding: 1rem; 
     }
 
     .card h3 {
-        font-size: 1rem; /* Título más pequeño */
+        font-size: 1rem; 
         margin-bottom: 0.5rem;
     }
 
     .card p {
-        font-size: 0.85rem; /* Texto descriptivo más pequeño */
+        font-size: 0.85rem; 
         line-height: 1.4;
     }
 
@@ -513,7 +549,6 @@ nav a:hover::after {
         margin-bottom: 0.5rem;
     }
 
-    /* 3. Footer centrado */
     .footer {
         text-align: center;
     }
@@ -526,7 +561,6 @@ nav a:hover::after {
         width: 100%;
     }
 
-    /* Ajustes generales */
     .hero-section {
         padding: 60px 0;
         min-height: auto;
@@ -544,37 +578,11 @@ nav a:hover::after {
 /* ESCONDER BOTÓN EN ESCRITORIO */
 @media (min-width: 769px) {
 
-  /* Buscador visible en desktop */
-  .search-box {
-    display: flex;
-    max-width: 350px;
-  }
-
-  .search-box input {
-    flex: 1;
-    padding: 8px;
-    border-radius: 20px 0 0 20px;
-    border: 1px solid #ccc;
-  }
-
-  .search-box button {
-    padding: 8px 12px;
-    border-radius: 0 20px 20px 0;
-    border: none;
-    background: #103e64;
-    color: #fff;
-  }
-
   /* Menú horizontal */
   .nav-menu ul {
     display: flex;
     flex-direction: row;
     gap: 20px;
-  }
-
-/* Ocultar retroceder */
-  .back-button {
-    display: none;
   }
 
   .hero-section {

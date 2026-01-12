@@ -85,9 +85,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("nav-menu");
+    const menu = navMenu.querySelectorAll("a");
 
     hamburger.addEventListener("click", () => {
-        navMenu.style.display =
-            navMenu.style.display === "flex" ? "none" : "flex";
-    });
+        navMenu.classList.toggle("active");
+        if(navMenu.classList.contains("active")){
+            hamburger.innerHTML = "✕";
+            hamburger.setAttribute("aria-expandad", "true")          
+        } else {
+           hamburger.innerHTML = "☰";
+           hamburger.setAttribute("aria-expandad", "false") 
+        }
+     
 
+    menu.forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        hamburger.innerHTML = "☰";
+          hamburger.setAttribute("aria-expandad", "false") 
+      })
+    })
+
+});
+  

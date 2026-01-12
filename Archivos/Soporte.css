@@ -73,7 +73,7 @@ nav a {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -98,86 +98,42 @@ nav a:hover::after {
   width: 80%;
 }
 
-/* Buscador */
-.search-box {
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
-  
+.menuMovil {
+  display: none;
 }
 
-.search-box input {
-  padding: 6px 10px;
-  border: 2px solid var(--border-color);
-  border-radius: 20px 0 0 20px;
-  outline: none;
-  font-size: 0.9rem;
-  width: 500px;
-}
-
-.search-box button {
-  padding: 6px 10px;
-  border: none;
-  background: var(--primary-color);
-  color: white;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.search-box button:hover {
-  background: #333; /* o un tono más oscuro */
-}
-
-.ico{
-  height: 18px;
-  color: white;
-  width: auto;
-}
+  .hamburguesa {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1100;
+    position: relative;
+  }
 
 /* Nuevos estilos para la versión profesional */
 .service-hero{
-    overflow:hidden;
-    padding: 8rem 2rem 4rem;
-    height: auto;
-    color:#fff;
-    text-align:center
+    background: linear-gradient(to bottom,rgba(26,54,93,0.8), rgba(38, 49, 60, 0.95)), url(/img/image.png) center/cover no-repeat;
+    color: var(--white);
+    padding: 120px 24px;
+    text-align: center;
+    margin-top: 70px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.hero-bg{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    position:absolute;
-    top:0;
-    left:0
-}
-
-.hero-overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:linear-gradient(to bottom,rgba(26,54,93,0.8),rgba(38, 49, 60, 0.95))
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    padding-top:190px
-}
-
-.hero-content h1{
-    font-size:3.5rem;
-    margin-bottom:1rem
-}
-
-.hero-content .subtitle{
+.subtitle{
     font-size:1.4rem;
     max-width:800px;
     margin:0 auto
 }
+
+/* ======================= */
+/*     SECCIÓN GENERAL     */
+/* ======================= */
 
 .service-intro h2{
     font-size:2rem;
@@ -419,8 +375,7 @@ nav a:hover::after {
   }
 
   .cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
-  }
+    grid-template-columns: repeat(2, 1fr);
 }
 
 /* =========================================
@@ -428,67 +383,127 @@ nav a:hover::after {
    ========================================= */
 @media (max-width: 768px) {
 
-    /* 1. HEADER: Ocultar menú y buscador, posicionar botón retroceso */
     header {
-        padding: 10px 20px;
+        display: flex;
         justify-content: space-between; 
         height: auto;
+        align-items: center;
+        padding: 10px 15px;
+        background: #fff;
     }
 
     header img {
-        height: 80px; /* Reducir tamaño del logo en móvil */
+        height: 80px;
     }
 
-    /* Ocultar navegación y buscador */
     nav, 
     .search-box {
         display: none !important;
     }
+  
+  .menuMovil {
+    display: block !important;
+  }
 
-    /* Estilo del botón de retroceso */
-    .back-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        color: rgb(174, 172, 172);
-        width: 40px;
-        height: 40px;
-        text-decoration: none;
-        visibility: visible; 
-    }
+.navmenu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    clip-path: circle(0px at 90% -10%); 
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.navmenu.active {
+    clip-path: circle(1200px at 90% -10%);
+    pointer-events: all;
+  }
 
-    /* 2. TARJETAS (BENEFICIOS): Mostrar de a 2 */
+  .navmenu li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+
+  .navmenu.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navmenu a {
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+    .submenu-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: none;
+      color: var(--white);
+      border: none;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 15px 0;
+      cursor: pointer;
+  }
+
+  /* SUBMENÚ (Más servicios) */
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center
+  }
+
+.submenu.show {
+    display: block;
+  }
+
+  .submenu a {
+    font-size: 1,1rem;
+    color: var(--gray-300);
+  }
+   
+
     .cards {
-        /* Forzamos 2 columnas como pediste */
         grid-template-columns: repeat(1, 1fr); 
     }
 
     .benefit-card {
-        padding: 1.5rem 1rem; /* Reducir padding interno para que quepa bien */
+        padding: 1.5rem 1rem; }
     }
     
     .benefit-card h3 {
-        font-size: 1rem; /* Ajustar tamaño de letra */
+        font-size: 1rem; 
     }
     
     .benefit-card i {
-        font-size: 2em; /* Iconos un poco más pequeños */
+        font-size: 2em; 
     }
 
-    /* 3. CTA FINAL (IMAGEN CENTRADA) */
+   
     .service-cta-final {
-        margin: 2rem 1rem; /* Margen externo reducido */
+        margin: 2rem 1rem; 
         display: flex;
-        flex-direction: column; /* Apilar contenido verticalmente */
-        transform: none; /* Quitar el scale del desktop */
-        padding-bottom: 0; /* La imagen irá al fondo */
+        flex-direction: column; 
+        transform: none; 
+        padding-bottom: 0; 
         height: 90%;
     }
 
     .cta-content {
         padding: 3rem 1.5rem 2rem;
-        text-align: center; /* Texto centrado */
+        text-align: center; 
         max-width: 100%;
     }
 
@@ -504,58 +519,32 @@ nav a:hover::after {
 
     .cta-buttons a {
         margin-right: 0;
-        width: 100%; /* Botones ancho completo */
+        width: 100%; 
         text-align: center;
     }
 
     .cta-image {
-        position: relative; /* Ya no es absoluta */
+        position: relative; 
         width: 100%;
-        height: 250px; /* Altura fija para la imagen */
+        height: 250px; 
         object-fit: cover;
-        border-radius: 0 0 12px 12px; /* Redondear solo abajo */
+        border-radius: 0 0 12px 12px; 
     }
 
-/* Contenedor del hero */
     .service-hero {
-        min-height: auto; /* suficiente sin dejar hueco */
-        padding: 1rem;
+      margin-top: 100px;
+       padding: 30px 16px;
+       min-height: 35vh;
     }
 
-    /* Imagen de fondo */
-    .hero-bg {
-        width: 100%;
-        max-height: 65%;
+    .service-hero h1{
+      font-size: 1.5rem;
     }
 
-    /* Capa oscura */
-    .hero-overlay {
-      max-height: 65%;
-             background:linear-gradient(to bottom,rgba(26,54,93,0.8),rgba(38, 49, 60, 0.95))
+    .service-hero p{
+      font-size: 1.2rem;
     }
 
-    /* Contenido centrado */
-    .hero-content {
-        position:absolute;
-        left:100%;
-        transform: translate(-100%, -100%);
-        color: white;
-        width: 100%;
-        padding-bottom: 40px;
-        
-    }
-
-    .hero-content h1 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-content p {
-        font-size: 0.4rem;
-        text-align:center;
-    }
-
-    /* INTRO */
     .service-intro {
         padding: 2px 1px 1px 1px;
         margin: 2px;
@@ -573,8 +562,6 @@ nav a:hover::after {
         padding: 2px;
     }
 
-
-    /* 4. FOOTER (CENTRADO) */
     .footer-row {
         flex-direction: column;
         text-align: center;
@@ -582,7 +569,6 @@ nav a:hover::after {
     }
 }
 
-/* --- TABLETS PEQUEÑAS / MÓVILES GRANDES (max-width: 850px) --- */
 @media (max-width: 850px) {
     .nav-menu ul {
      gap: 10px;
@@ -592,24 +578,6 @@ nav a:hover::after {
       padding: 0.5rem;
       font-size: 0.9rem; 
     }
-
-    .search-box {
-       display: none; 
-      } /* Ocultar buscador si no cabe */
-
-       /* Ajustes generales de texto y márgenes */
-    .service-hero {
-        padding: 24rem 2rem 2rem ; 
-        min-height: 70%;
-    }
-
-    .hero-bg{
-      height: 70%;
-    }
-
-    .hero-overlay{
-      height: 70%;
-    }   
 }
 
 /* ================================
@@ -617,35 +585,9 @@ nav a:hover::after {
 ================================ */
 @media (min-width: 769px) {
 
-  /* Buscador visible en desktop */
-  .search-box {
-    display: flex;
-    max-width: 350px;
-  }
-
-  .search-box input {
-    flex: 1;
-    padding: 8px;
-    border-radius: 20px 0 0 20px;
-    border: 1px solid #ccc;
-  }
-
-  .search-box button {
-    padding: 8px 12px;
-    border-radius: 0 20px 20px 0;
-    border: none;
-    background: #103e64;
-    color: #fff;
-  }
-
   .cta-content {
     padding: 3rem 1.5rem 2rem;
-    text-align: center; /* Texto centrado */
+    text-align: center; 
     max-width: 50%;
-  }
-
-   /* Oculta retroceder */
-  .back-button {
-    display: none; 
   }
 }
