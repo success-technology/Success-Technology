@@ -184,7 +184,7 @@ img {
   align-items: center;
 }
 
-.service-card:hover {
+.service-card:active {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   transform: translateY(-6px);
 }
@@ -252,7 +252,7 @@ img {
   transition: all 0.3s ease;;
 }
 
-.services :hover a{
+.services :active a{
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -308,7 +308,7 @@ img {
 }
 
 /* Efecto suave al pasar el cursor */
-#nosotros h3:hover {
+#nosotros h3:active{
   background: var(--primary-color);
   color: var(--white);
   transform: translateY(-3px);
@@ -433,7 +433,7 @@ img {
     color: white;
 }
 
-.btn-submit:hover {
+.btn-submit:active {
   background: rgb(148, 144, 144);
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -531,7 +531,7 @@ img {
   transition: opacity 0.3s ease;
 }
 
-.footer-col a:hover {
+.footer-col a:active {
   opacity: 1;
 }
 
@@ -553,7 +553,7 @@ img {
   opacity: 1; /* Ajustado para mejor visibilidad */
 }
 
-.social-links a:hover {
+.social-links a:active {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -686,30 +686,6 @@ img {
  #servicios h2{
     font-size: 30px;
   }
-
-  .service-card:active {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  transform: translateY(-6px);
-}
-
-/* Línea superior de color */
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--primary-color);
-  border-radius: 12px 12px 0 0;
-}
-
-.services :active a{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
 }
 
 /* ================================
