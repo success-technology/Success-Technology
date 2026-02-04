@@ -54,7 +54,7 @@ header {
 }
 
 img {
-  height: 110px;;
+  height: 80px;
 }
 
 .nav-menu {
@@ -113,7 +113,7 @@ img {
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/perfil.jpeg") center/cover no-repeat;
   color: var(--white);
-  padding: 120px 24px;
+  padding: 120px 50px;
   text-align: center;
   margin-top: 70px;
   min-height: 80vh;
@@ -124,20 +124,21 @@ img {
 }
 
 .hero h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.1;
   letter-spacing: -0.025em;
   max-width: 1000px;
   color: #f7fafc;
+  font-family: Arial, sans-serif;
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
-  max-width: 700px;
+  max-width: 800px;
   line-height: 1.7;
 }
 
@@ -252,11 +253,10 @@ img {
 }
 
 .services :hover a{
-   opacity: 1;
+  opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
 
 #nosotros {
   background: var(--white);
@@ -616,7 +616,7 @@ img {
 
   /* LOGO */
   header img {
-    width: 120px;
+    width: 100px;
     height: auto;
   }
 
@@ -676,8 +676,40 @@ img {
 
   .hero h2{
     margin-top:20px ;
-    font-size: 2.1rem;
+    font-size: 20px;
   }
+
+  .hero p{
+    font-size: 16px;
+ }
+
+ #servicios h2{
+    font-size: 30px;
+  }
+
+  .service-card:active {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+}
+
+/* Línea superior de color */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 12px 12px 0 0;
+}
+
+.services :active a{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 }
 
 /* ================================

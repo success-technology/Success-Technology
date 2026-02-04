@@ -53,9 +53,8 @@ header {
 }
 
 img {
-  height: 110px;;
+  height: 80px;;
 }
-
 
 nav ul {
   display: flex;
@@ -114,7 +113,7 @@ nav a:hover::after {
 
 /* Hero Innovación */
 .hero-innovacion {
-  background: url("/img/innovación.jpeg") center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url("/img/innovación.jpeg") center/cover no-repeat;
   padding: 120px 24px;
   text-align: center;
   color: var(--white);
