@@ -252,7 +252,7 @@ img {
   transition: all 0.3s ease;;
 }
 
-.services :active a{
+.services :hover a{
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
