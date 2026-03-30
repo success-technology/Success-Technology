@@ -7,53 +7,62 @@
     <link rel="icon" href="/img/Modern Professional Technology Logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="Soporte.css">
     <!-- Heroicons (opcional, para iconos profesionales) -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/Archivos/whatsapp-btn.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
 </head>
 <body>
 
     <!-- Encabezado -->
-    <header>
-       
-          <img src="/img/Modern Professional Technology Logo.jpg" alt="Success Technology">
-     
-             <!-- menú móvil -->
-     <nav class="menuMovil">
+<header>
+    <img src="/img/Success.png" alt="titulo">
+
+       <!-- menú móvil -->
+     <nav>
         <button class="hamburguesa" id="hamburguesa"> ☰ </button>
-        <ul class="navmenu" id="navmenu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="/index.html#inicio">Inicio</a></li>
-          
+           
           <li class="dropdown">
-            <button class="submenu-btn" id="submenu-btn">Más servicios ▼</button>
+            <button class="submenu-btn" id="submenu-btn"> Servicios <i class="fi fi-rr-angle-small-down"></i></button>
             <ul class="submenu" id="submenu">
-              <li><a href="/Archivos/Portal-web.html">Portal web</a></li>
-              <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de datos</a></li>
-              <li><a href="/Archivos/Innovación.html">Innovación</a></li>
+              <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de Datos</a></li>
+              <li><a href="/Archivos/Portal-web.html">Portal Web</a></li>
+              <li><a href="/Archivos/Innovación.html">Innovación y Desarrollo</a></li>
               <li><a href="/Archivos/Desarrollo.html">Desarrollo de software</a></li>
               <li><a href="/Archivos/Consultoria.html">Consultoria</a></li>
             </ul>
           </li>
-
+          <li><a href="#nosotros">Success</a></li>
           <li><a href="/index.html#contact-section">Contacto</a></li>
         </ul>
       </nav>
-      
-        <nav class="nav-menu" id="nav-menu">
-            <ul>
-                <li><a href="/index.html#Inicio">Inicio</a></li>
-                <li><a href="/index.html#servicios">Nuestros servicios</a></li>
-                <li><a href="/index.html#nosotros">Nosotros</a></li>
-                <li><a href="/index.html#contact-section">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  </header>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">¡Escríbenos por WhatsApp!</span>
+  
+  <a class="whatsapp-btn"
+    href="https://wa.me/573136950348?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <span class="whatsapp-badge"></span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
 
     <!-- CONTENIDO PRINCIPAL MEJORADO -->
     <main>
         <section class="service-page">
                 <!-- Hero con imagen de fondo -->
-                <div class="service-hero"> 
+                <div class="service-hero">
                         <h1>Servicios TI Especializados</h1>
-                        <p class="subtitle">Transformación digital estratégica que impulsa crecimiento sostenible y ventaja competitiva</p>                
+                        <p class="subtitle">Los servicios de TI personalizados son soluciones tecnológicas diseñadas específicamente para satisfacer las necesidades, objetivos y procesos únicos de una empresa. A diferencia de las soluciones estándar, estos servicios se adaptan al contexto del negocio, permitiendo desarrollar, implementar y optimizar herramientas como software, infraestructura, bases de datos o sistemas digitales de manera flexible y escalable. Su propósito es mejorar la eficiencia operativa, facilitar la toma de decisiones y potenciar la innovación, alineando la tecnología con la estrategia empresarial para generar mayor valor y competitividad.</p>
                 </div>
 
                 <div class="container">
@@ -101,8 +110,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- CTA final más impactante -->
+        <section class="cta">
+             <!-- CTA final más impactante -->
                 <div class="service-cta-final">
                     <div class="cta-content">
                         <h2>Impulsa tu Negocio al Siguiente Nivel Tecnológico</h2>
@@ -114,6 +126,45 @@
                     </div>
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo Success Technology" class="cta-image">
                 </div>
+        </section>
+
+        <section class="soporte">
+
+            <div class="sopote-content">
+            <div class="soporte-lista">
+            <h3>Preguntas Frecuentes sobre Innovación y Desarrollo</h3>
+
+                <div class="faq">
+
+                    <details>
+                    <summary>¿Qué son los servicios de TI?</summary>
+
+                    <p>Son soluciones tecnológicas que ayudan a las empresas a gestionar, optimizar y proteger sus sistemas, datos e infraestructura digital.</p>
+                    </details>
+
+                    <details>
+                    <summary>¿Para qué sirven los servicios de TI en una empresa?</summary>
+                    <p>Permiten mejorar la eficiencia, automatizar procesos, fortalecer la seguridad y facilitar la toma de decisiones basada en datos.</p>
+                    </details>
+
+                    <details>
+                    <summary>¿Qué tan importantes son la seguridad y la protección de datos?</summary>
+                    <p>Son fundamentales, ya que evitan pérdidas de información, ataques cibernéticos y garantizan la continuidad del negocio.</p>
+                    </details>
+
+                    <details>
+                    <summary>¿Qué es la computación en la nube?</summary>
+                    <p>Es el uso de servidores remotos en internet para almacenar, gestionar y procesar datos, en lugar de hacerlo en equipos locales.</p>
+                    </details>
+
+                    <details>
+                    <summary>¿Qué beneficios ofrecen los servicios de TI?</summary>
+                    <p>Aumentan la productividad, reducen costos, mejoran la seguridad de la información y brindan ventaja competitiva.</p>
+                    </details>
+
+                </div>
+            </div>
+            <img src="/img/Nosotros.png" alt="Silueta de innovación">
             </div>
         </section>
     </main>
@@ -132,6 +183,8 @@
                         <li><a href="/index.html#inicio">Inicio</a></li>
                         <li><a href="/index.html#servicios">Servicios</a></li>
                         <li><a href="/index.html#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></li>
                         <li><a href="/index.html#contact-section">Contacto</a></li>
                     </ul>
                 </div>
@@ -157,7 +210,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos de Uso</a></p>
+                <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a> | <a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></p>
             </div>
         </div>
     </footer>
@@ -165,7 +218,7 @@
     <script>
   document.addEventListener("DOMContentLoaded", () => {
     const hamburguesa = document.getElementById("hamburguesa");
-    const navmenu = document.getElementById("navmenu");
+    const navmenu = document.getElementById("nav-menu");
     const submenuBtn = document.getElementById("submenu-btn");
     const submenu = document.getElementById("submenu");
 
@@ -190,14 +243,21 @@
     }
 
     // Cerrar menú al hacer click en links (excepto el botón de submenú)
-    const links = document.querySelectorAll(".navmenu a:not(.submenu-btn)");
+    const links = document.querySelectorAll(".nav-menu a:not(.submenu-btn)");
     links.forEach(link => {
         link.addEventListener("click", () => {
             navmenu.classList.remove("active");
             hamburguesa.innerHTML = "☰";
         });
     });
+
+  /* ── Header sombra al hacer scroll ── */
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+  }, { passive: true });
 });
+
 </script>
 
 </body>

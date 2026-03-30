@@ -5,64 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal web | Success Technology</title>
     <link rel="stylesheet" href="Portal-web.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/Archivos/whatsapp-btn.css">
 </head>
 <body>
 
     <!-- Encabezado -->
- <header>
-   <img src="/img/Modern Professional Technology Logo.jpg" alt="titulo">
+<header>
+    <img src="/img/Success.png" alt="titulo">
 
-         <!-- menú móvil -->
-     <nav class="menuMovil">
+       <!-- menú móvil -->
+     <nav>
         <button class="hamburguesa" id="hamburguesa"> ☰ </button>
-        <ul class="navmenu" id="navmenu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="/index.html#inicio">Inicio</a></li>
-          
+           
           <li class="dropdown">
-            <button class="submenu-btn" id="submenu-btn">Más servicios ▼</button>
+            <button class="submenu-btn" id="submenu-btn">Servicios <i class="fi fi-rr-angle-small-down"></i></button>
             <ul class="submenu" id="submenu">
               <li><a href="/Archivos/Soporte-TI.html">Sercicios TI</a></li>
               <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de datos</a></li>
-              <li><a href="/Archivos/Innovación.html">Innovación</a></li>
+              <li><a href="/Archivos/Innovación.html">Innovación y Desarrollo</a></li>
               <li><a href="/Archivos/Desarrollo.html">Desarrollo de software</a></li>
               <li><a href="/Archivos/Consultoria.html">Consultoria</a></li>
             </ul>
           </li>
-
+          <li><a href="#nosotros">Success</a></li>
           <li><a href="/index.html#contact-section">Contacto</a></li>
         </ul>
       </nav>
+</header>
 
-    <nav class="nav-menu" id="nav-menu">
-      <ul>
-        <li><a href="/index.html#inicio">Inicio</a></li>
-        <li><a href="/index.html#servicios">Nuestros servicios</a></li>
-        <li><a href="/index.html#nosotros">Nosotros</a></li>
-        <li><a href="/index.html#contact-section">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
 
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">¡Escríbenos por WhatsApp!</span>
+  
+  <a class="whatsapp-btn"
+    href="https://wa.me/573136950348?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <span class="whatsapp-badge"></span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
 
   <!-- Sección: Portales Web -->
     <section class="portalweb-hero">
-        <div class="portalweb-hero-content">
-            <h1>Portales Web</h1>
-            <p>Explotación de portales web que funcionan como centros de información y servicios.  
-            Creamos sitios web que conectan tu empresa con tus clientes.</p>
-        </div>
+      <video src="/img/Perfil-web.mp4" autoplay muted loop class="background-video"></video>
+      <h1>Portales Web</h1>
+      <p>Un portal web es una plataforma en línea diseñada para recopilar y presentar información relevante, así como ofrecer servicios integrados que faciliten la navegación y el acceso a distintos recursos desde un único punto de entrada. A diferencia de un sitio web convencional, que suele enfocarse en un tema o servicio específico, el portal web proporciona variedad de contenidos y funcionalidades, permitiendo a los usuarios interactuar, consultar información y realizar gestiones en línea. </p>
     </section>
 
     <!-- Sección información del servicio -->
-    <section class="portalweb-info">
-        <h2>¿Qué es un Portal Web?</h2>
-        <p>
-            Un portal web es una plataforma digital que centraliza información, herramientas, procesos y 
-            servicios para tus usuarios. Permite que tus clientes, empleados o aliados accedan a todo lo que 
-            necesitan desde un solo lugar.
-        </p>
+    <section class="portalweb">
+      <h2>¿Qué es un Portal Web En Success Technology?</h2>
 
-        <div class="portalweb-cards">
+            <p>Un portal web en <strong>Success Technology</strong> es una plataforma digital diseñada para centralizar información, servicios y procesos de una organización en un solo lugar, accesible desde cualquier dispositivo y en cualquier momento. <br><br>
+
+            A diferencia de una página web tradicional, un portal web permite la interacción directa con los usuarios, ofreciendo funcionalidades personalizadas como gestión de clientes, automatización de procesos, acceso a información en tiempo real, integración con sistemas empresariales y herramientas de análisis.<br><br>
+
+            En Success Technology, <strong>desarrollamos portales web a medida que se adaptan a las necesidades de cada empresa,</strong> con el objetivo de mejorar la eficiencia operativa, optimizar la toma de decisiones y fortalecer la experiencia del usuario.</p>
+   
+        <img src="/img/Post-web .png" alt="portal-web">
+
+    </section>
+
+    <section class="portal-card">
+       <div class="portalweb-cards">
             <div class="pw-card">
                 <h3>Centralización de Información</h3>
                 <p>Reúne documentos, noticias, avisos, servicios y contenido en un solo espacio accesible 24/7.</p>
@@ -80,7 +94,17 @@
         </div>
     </section>
 
-    <!-- Sección beneficios -->
+    <!-- Sección llamada a la acción -->
+    <section class="portalweb-cta">
+      <div class="Info-cta">
+        <h2>Transforma tu empresa con un portal web profesional</h2>
+        <p>En Success Technology diseñamos portales web modernos, rápidos y seguros adaptados a las necesidades de tu negocio.</p>
+        <a href="/index.html#contact-section" class="btn-cta">Solicitar información</a>
+      </div>
+      <img src="/img/Jhoimar (1).png" alt="imagen de contacto">
+    </section>
+
+        <!-- Sección beneficios -->
     <section class="portalweb-benefits">
         <h2>Beneficios de un Portal Web</h2>
 
@@ -93,11 +117,121 @@
         </ul>
     </section>
 
-    <!-- Sección llamada a la acción -->
-    <section class="portalweb-cta">
-        <h2>Transforma tu empresa con un portal web profesional</h2>
-        <p>En Success Technology diseñamos portales web modernos, rápidos y seguros adaptados a las necesidades de tu negocio.</p>
-        <a href="/index.html#contact-section" class="btn-cta">Solicitar información</a>
+      <!-- Sección preguntas frecuentes -->
+
+    <section class="portal-cuestion">
+    <div class="cuestion-content">
+      <div class="content-lista">
+       <h3>Preguntas Frecuentes sobre Innovación y Desarrollo</h3>
+
+          <div class="faq">
+
+            <details>
+              <summary>¿Qué es un portal web y en qué se diferencia de una página web?</summary>
+
+              <p><strong>Un portal web</strong> es una plataforma digital interactiva que permite a los usuarios acceder a información, servicios y funcionalidades personalizadas desde un solo lugar. Generalmente incluye inicio de sesión, gestión de datos, automatización de procesos e integración con otros sistemas. <br><br>
+
+              Por otro lado, una página web es principalmente informativa. Su objetivo es mostrar contenido como textos, imágenes o servicios, pero con poca o ninguna interacción avanzada con el usuario. <br><br>
+
+              La principal diferencia es que un portal web está diseñado para la gestión y la interacción, mientras que una página web está enfocada en la presentación de información. <br><br>
+
+              En resumen, si tu empresa solo necesita presencia digital, una página web es suficiente; pero si buscas optimizar procesos, gestionar usuarios o automatizar tareas, lo ideal es un portal web. 🚀.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Para qué sirve un portal web en una empresa?</summary>
+
+              <p>Un portal web sirve para centralizar, automatizar y optimizar los procesos de una empresa en una sola plataforma digital accesible desde cualquier lugar. <br><br>
+
+              Permite gestionar información, usuarios y operaciones de forma más rápida, segura y organizada, mejorando tanto la eficiencia interna como la experiencia del cliente. <br><br>
+
+             <strong>Con un portal web, una empresa puede:</strong><br><br>
+
+              Centralizar toda su información en un solo sistema<br><br>
+              Automatizar tareas repetitivas y reducir errores<br><br>
+              Mejorar la comunicación con clientes, empleados o proveedores<br><br>
+              Acceder a datos en tiempo real para tomar mejores decisiones<br><br>
+              Integrar diferentes herramientas y sistemas en una sola plataforma </p>
+            </details>
+
+            <details>
+              <summary>¿Qué funcionalidades puede tener un portal web?</summary>
+
+              <p>Un portal web puede incluir múltiples funcionalidades según las necesidades de la empresa, pero en general está diseñado para gestionar información, usuarios y procesos de forma eficiente. <br><br>
+
+              <strong>Entre las funcionalidades más comunes se encuentran:</strong><br><br>
+
+              <strong>Autenticación de usuarios:</strong> registro, inicio de sesión y control de accesos<br><br>
+
+              <strong>Panel de administración:</strong> gestión de contenidos, usuarios y configuraciones<br><br>
+
+              <strong>Gestión de clientes o empleados:</strong> registro, seguimiento y actualización de información<br><br>
+
+              <strong>Dashboard y reportes:</strong> visualización de datos en tiempo real mediante gráficos y estadísticas<br><br>
+
+              <strong>Automatización de procesos:</strong> ejecución automática de tareas repetitivas<br><br>
+
+              <strong>Integración con otros sistemas:</strong> conexión con CRM, ERP, pasarelas de pago, APIs, entre otros<br><br>
+
+              <strong>Notificaciones y alertas:</strong> envío de correos o avisos dentro de la plataforma<br><br>
+
+              <strong>Gestión documental:</strong> almacenamiento y acceso a archivos digitales<br><br>
+
+              <strong>Soporte y comunicación:</strong> chat, tickets o formularios de contacto<br><br>
+
+              <strong>Acceso multidispositivo:</strong> funcionamiento en computador, tablet y móvil</p>
+            </details>
+
+            <details>
+              <summary>¿Se puede integrar con otros sistemas?</summary>
+
+              <p>Sí, un portal web puede integrarse con otros sistemas y plataformas sin problema. De hecho, una de sus principales ventajas es la capacidad de <strong>conectar diferentes herramientas en un solo entorno digital.</strong> <br><br>
+
+              Esto permite que la información fluya automáticamente entre sistemas, evitando duplicidad de datos y mejorando la eficiencia operativa.<br><br>
+
+              <strong>Un portal web puede integrarse con:</strong><br><br>
+
+              Sistemas de gestión empresarial (ERP)<br><br>
+              Plataformas de clientes (CRM)<br><br>
+              Pasarelas de pago<br><br>
+              Bases de datos<br><br>
+              APIs de terceros<br><br>
+              Sistemas contables y administrativos<br><br>
+
+              Gracias a estas integraciones, la empresa puede automatizar procesos, centralizar la información y tomar decisiones más rápidas y precisas.</p>
+            </details>
+
+            <details>
+              <summary>¿Por qué elegir Success Technology para desarrollar un portal web?</summary>
+
+              <p>Porque en Success Technology no solo desarrollamos software, creamos soluciones estratégicas que generan resultados reales para tu empresa.<br><br>
+
+              Nos enfocamos en entender tus procesos, identificar oportunidades de mejora y construir un portal web que realmente aporte valor a tu negocio.<br><br>
+
+              <strong>Al elegirnos obtienes:</strong><br><br>
+
+              <strong> Soluciones a medida:</strong> adaptadas completamente a las necesidades de tu empresa.<br><br>
+
+              <strong>Enfoque en resultados:</strong> optimizamos procesos, reducimos costos y mejoramos la eficiencia.<br><br>
+
+              <strong>Tecnología moderna:</strong> utilizamos herramientas actuales, seguras y escalables.<br><br>
+
+              <strong>Integración total:</strong> conectamos tu portal con otros sistemas y plataformas.<br><br>
+
+              <strong>Experiencia de usuario optimizada:</strong> interfaces intuitivas y fáciles de usar.<br><br>
+
+              <strong>Acompañamiento continuo:</strong> soporte y evolución constante de tu solución.<br><br>
+
+              Más que un proveedor, somos un aliado tecnológico que impulsa la transformación digital de tu empresa.<br><br>
+
+              Con <strong>Success Technology</strong>, tu portal web no será solo una herramienta… será una ventaja competitiva. 🚀</p>
+            </details>
+
+          </div>
+      </div>
+      <img src="/img/portal-model.png" alt="Silueta de innovación">
+    </div>
     </section>
 
 
@@ -118,6 +252,8 @@
           <li><a href="/index.html#inicio">Inicio</a></li>
           <li><a href="/index.html#servicios">Servicios</a></li>
           <li><a href="/index.html#nosotros">Sobre Nosotros</a></li>
+          <li><a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+          <li><a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></li>
           <li><a href="/index.html#contact-section">Contacto</a></li>
         </ul>
       </div>
@@ -149,7 +285,7 @@
     
     <!-- Aviso Legal -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos de Uso</a></p>
+      <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a> | <a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></p>
     </div>
   </div>
 </footer>
@@ -157,7 +293,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const hamburguesa = document.getElementById("hamburguesa");
-    const navmenu = document.getElementById("navmenu");
+    const navmenu = document.getElementById("nav-menu");
     const submenuBtn = document.getElementById("submenu-btn");
     const submenu = document.getElementById("submenu");
 
@@ -182,14 +318,60 @@
     }
 
     // Cerrar menú al hacer click en links (excepto el botón de submenú)
-    const links = document.querySelectorAll(".navmenu a:not(.submenu-btn)");
+    const links = document.querySelectorAll(".nav-menu a:not(.submenu-btn)");
     links.forEach(link => {
         link.addEventListener("click", () => {
             navmenu.classList.remove("active");
             hamburguesa.innerHTML = "☰";
         });
     });
+
+
+  /* ── Header sombra al scrollear ── */
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    header?.classList.toggle("scrolled", window.scrollY > 50);
+  }, { passive: true });
+
+
+  /* ── Scroll reveal ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  document.querySelectorAll(
+    ".anim-up, .anim-down, .anim-left, .anim-right, " +
+    ".anim-pop, .anim-wipe, .anim-drop, .anim-list"
+  ).forEach(el => observer.observe(el));
+
+
+  /* ── Parallax suave en el Hero video ── */
+  const video = document.querySelector(".background-video");
+  window.addEventListener("scroll", () => {
+    if (video && window.scrollY < window.innerHeight) {
+      video.style.transform =
+        `translate(-50%, calc(-50% + ${window.scrollY * 0.25}px))`;
+    }
+  }, { passive: true });
+
+
+  /* ── Cursor teal parpadeante en el hero h1 ── */
+  const heroTitle = document.querySelector(".portalweb-hero h1");
+  if (heroTitle) {
+    heroTitle.style.borderRight = "3px solid var(--accent-color)";
+    setTimeout(() => { heroTitle.style.borderRight = "none"; }, 2300);
+  }
+
 });
+
 </script>
     
 </body>

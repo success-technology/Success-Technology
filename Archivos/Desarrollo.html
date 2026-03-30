@@ -5,51 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desarrollo de Software | Success Technology</title>
     <link rel="stylesheet" href="Desarrollo.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/Archivos/whatsapp-btn.css">
 </head>
 <body>
 
     <!-- Encabezado -->
  <header>
-   <img src="/img/Modern Professional Technology Logo.jpg" alt="titulo">
+    <img src="/img/Success.png" alt="titulo">
 
-      <!-- menú móvil -->
-     <nav class="menuMovil">
+       <!-- menú móvil -->
+     <nav>
         <button class="hamburguesa" id="hamburguesa"> ☰ </button>
-        <ul class="navmenu" id="navmenu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="/index.html#inicio">Inicio</a></li>
-          
+           
           <li class="dropdown">
-            <button class="submenu-btn" id="submenu-btn">Más servicios ▼</button>
+            <button class="submenu-btn" id="submenu-btn">Servicios <i class="fi fi-rr-angle-small-down"></i></button>
             <ul class="submenu" id="submenu">
               <li><a href="/Archivos/Soporte-TI.html">Sercicios TI</a></li>
               <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de datos</a></li>
               <li><a href="/Archivos/Portal-web.html">Portal web</a></li>
-              <li><a href="/Archivos/Innovación.html">Innovación</a></li>
+              <li><a href="/Archivos/Innovación.html">Innovación y Desarrollo</a></li>
               <li><a href="/Archivos/Consultoria.html">Consultoria</a></li>
             </ul>
           </li>
-
+          <li><a href="#nosotros">Success</a></li>
           <li><a href="/index.html#contact-section">Contacto</a></li>
         </ul>
       </nav>
-
-    <nav class="nav-menu" id="nav-menu">
-      <ul>
-        <li><a href="/index.html#inicio">Inicio</a></li>
-        <li><a href="/index.html#servicios">Nuestros servicios</a></li>
-        <li><a href="/index.html#nosotros">Nosotros</a></li>
-        <li><a href="/index.html#contact-section">Contacto</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">¡Escríbenos por WhatsApp!</span>
+  
+   <a class="whatsapp-btn"
+    href="https://wa.me/573136950348?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <span class="whatsapp-badge"></span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
 
+  <main>
     <!-- Sección Hero -->
     <section class="hero-dev">
         <div class="hero-dev-content">
             <h1>Desarrollo de Software</h1>
-            <p>Transformamos tus ideas en soluciones digitales escalables, seguras y de alto rendimiento, creadas a la medida de tu empresa.</p>
+            <p>El desarrollo de software es el proceso mediante el cual se diseñan, crean, prueban e implementan aplicaciones o sistemas informáticos para resolver problemas o satisfacer necesidades específicas. Este proceso incluye etapas como el análisis de requerimientos, diseño, programación, pruebas y mantenimiento, y puede aplicarse a distintos entornos como aplicaciones web, móviles o de escritorio. Su objetivo es construir soluciones eficientes, seguras y escalables que aporten valor a los usuarios o a las empresas</p>
         </div>
     </section>
 
@@ -92,36 +101,58 @@
     </section>
 
     <!-- Metodología -->
-    <section class="dev-process">
-        <h2>Nuestra metodología de desarrollo</h2>
+      <section class="Metodología">
+    <div class="Meto-content">
+      <img src="/img/Metodología.jpg" alt="metodología">
+              <div class="Meto-text">
+                    <h2>Conoce nuestra metodología de Desarrollo</h2>
 
+                    <p>En <strong>Success Technology</strong> trabajamos con una metodología enfocada en la planificación, la eficiencia y la mejora continua, asegurando que cada proyecto cumpla con los objetivos del cliente y los más altos estándares de calidad. Nuestro proceso inicia con un análisis detallado de las necesidades, donde identificamos los requerimientos y definimos una estrategia clara de trabajo. <br><br>
+
+                    Posteriormente, pasamos a la fase de diseño y desarrollo, en la que construimos soluciones tecnológicas funcionales, escalables y adaptadas a cada contexto. Durante todo el proceso mantenemos una comunicación constante con el cliente, lo que nos permite realizar ajustes oportunos y garantizar resultados alineados con sus expectativas. <br><br>
+
+                    Finalmente, realizamos pruebas, implementación y seguimiento, asegurando el correcto funcionamiento de la solución y brindando soporte continuo. Nuestra metodología combina organización, tecnología e innovación para ofrecer resultados confiables y de alto impacto.</p>
+              </div>
+            </div>
+  </section>
+
+     <section class="dev-process">
+    <img src="/img/Fases.png" alt="fases">
+        <h2>Nuestra metodología de desarrollo</h2>
+        <p>Nuestras fases de desarrollo están diseñadas para garantizar un proceso organizado, eficiente y orientado a resultados. Desde el análisis inicial hasta el soporte continuo, cada etapa permite construir soluciones de software de alta calidad, adaptadas a las necesidades del cliente y enfocadas en ofrecer una experiencia óptima y un funcionamiento confiable.</p>
         <div class="process-steps">
             <div class="step">
+              <img src="/img/Planificación.png" alt="Planificación">
                 <h4>1. Análisis y planificación</h4>
-                <p>Comprendemos tus necesidades, definimos requisitos y elaboramos un plan de desarrollo estratégico.</p>
+                <p>Comprendemos tus necesidades y elaboramos un plan de desarrollo estratégico.</p>
             </div>
 
             <div class="step">
+              <img src="/img/Diseño.jpg" alt="Diseño">
                 <h4>2. Diseño UX/UI</h4>
-                <p>Diseñamos interfaces modernas, intuitivas y centradas en el usuario para garantizar una experiencia óptima.</p>
+                <p>Diseñamos interfaces modernas centradas en el usuario para garantizar una experiencia óptima.</p>
             </div>
 
             <div class="step">
+              <img src="/img/Desarrollo.webp" alt="Desarrollo">
                 <h4>3. Desarrollo y programación</h4>
-                <p>Construimos el software con tecnologías robustas, código limpio y mejores prácticas del mercado.</p>
+                <p>Construimos software con tecnologías robustas, código limpio y mejores prácticas del mercado.</p>
             </div>
 
             <div class="step">
+              <img src="/img/Prueba.jpg" alt="Prueba">
                 <h4>4. Pruebas y calidad</h4>
                 <p>Realizamos pruebas unitarias, funcionales y de rendimiento para asegurar un producto final estable.</p>
             </div>
 
             <div class="step">
+              <img src="/img/implementación.webp" alt="implementación">
                 <h4>5. Implementación</h4>
-                <p>Desplegamos el software en entornos seguros y garantizamos su funcionamiento óptimo.</p>
+                <p>Desplegamos el software en entornos seguros garantizando su funcionamiento óptimo.</p>
             </div>
 
             <div class="step">
+              <img src="/img/soporte.webp" alt="mantenimiento">
                 <h4>6. Soporte continuo</h4>
                 <p>Ofrecemos mantenimiento, actualizaciones y asistencia técnica cuando lo necesites.</p>
             </div>
@@ -155,6 +186,8 @@
           <li><a href="/index.html#inicio">Inicio</a></li>
           <li><a href="/index.html#servicios">Servicios</a></li>
           <li><a href="/index.html#nosotros">Sobre Nosotros</a></li>
+          <li><a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+          <li><a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></li>
           <li><a href="/index.html#contact-section">Contacto</a></li>
         </ul>
       </div>
@@ -186,7 +219,7 @@
     
     <!-- Aviso Legal -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos de Uso</a></p>
+      <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a> | <a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></p>
     </div>
   </div>
 </footer>
@@ -194,7 +227,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const hamburguesa = document.getElementById("hamburguesa");
-    const navmenu = document.getElementById("navmenu");
+    const navmenu = document.getElementById("nav-menu");
     const submenuBtn = document.getElementById("submenu-btn");
     const submenu = document.getElementById("submenu");
 
@@ -219,14 +252,42 @@
     }
 
     // Cerrar menú al hacer click en links (excepto el botón de submenú)
-    const links = document.querySelectorAll(".navmenu a:not(.submenu-btn)");
+    const links = document.querySelectorAll(".nav-menu a:not(.submenu-btn)");
     links.forEach(link => {
         link.addEventListener("click", () => {
             navmenu.classList.remove("active");
             hamburguesa.innerHTML = "☰";
         });
     });
+
+     // Cerrar submenú al hacer click fuera de él
+
+  /* ── Header sombra al hacer scroll ── */
+  const header = document.querySelector("header");
+  window.addEventListener("scroll", () => {
+    header?.classList.toggle("scrolled", window.scrollY > 40);
+  }, { passive: true });
+
+
+  /* ── Scroll reveal — IntersectionObserver ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  document.querySelectorAll(
+    ".anim-up, .anim-down, .anim-left, .anim-right, .anim-pop, .anim-flip"
+  ).forEach(el => observer.observe(el));
+
 });
+
 </script>
 
 </body>

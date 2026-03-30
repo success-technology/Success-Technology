@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Success Technology</title>
   <!-- Favicon -->
-  <link rel="icon" href="./img/Ico.png" type="image/x-icon" class="ico">
+  <link rel="icon" type="image/png" href="img/Icono.png">
   <!-- CSS -->
   <link rel="stylesheet" href="./Archivos/Style.css">
+  <link rel="stylesheet" href="/Archivos/whatsapp-btn.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
   <!-- Encabezado -->
   <header>
     <div>
-       <img src="./img/Modern Professional Technology Logo.jpg" alt="titulo">
+       <img src="./img/Success.png" alt="titulo">
     </div>
 
     <nav>
@@ -22,78 +24,250 @@
     <!-- Menú -->
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Nuestros servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
+        <li class="dropdown">
+            <button class="submenu-btn" id="submenu-btn">Servicios <i class="fi fi-rr-angle-small-down"></i></button>
+            <ul class="submenu" id="submenu">
+              <li><a href="/Archivos/Portal-web.html">Portal web</a></li>
+              <li><a href="/Archivos/Procesamiento-Datos.html">Procesamiento de datos</a></li>
+              <li><a href="/Archivos/Innovación.html">Innovación y Desarrollo</a></li>
+              <li><a href="/Archivos/Desarrollo.html">Desarrollo de software</a></li>
+              <li><a href="/Archivos/Consultoria.html">Consultoria</a></li>
+              <li><a href="/Archivos/Soporte-TI.html">Servicios TI</a></li>
+            </ul>
+          </li>
+        <li><a href="#nosotros">Success</a></li>
         <li><a href="#contact-section">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">¡Escríbenos por WhatsApp!</span>
+  
+    <a class="whatsapp-btn"
+    href="https://wa.me/573136950348?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <span class="whatsapp-badge"></span>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
   <!-- Sección Inicio -->
   <section id="inicio" class="hero">
+    <video src="img/Video-perfil.mp4" autoplay muted loop class="background-video"></video>
     <h2>Innovación y Tecnología para tu Éxito</h2>
     <p>En Success Technology creamos soluciones de software y aplicaciones que empoderan a organizaciones de todos los tamaños para operar con mayor eficiencia, competitividad y creatividad digital.</p>
   </section>
 
   <!-- Servicios -->
   <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="services"> 
+    <h2>Somos los mejores en Desarrollo de Software</h2>
+    <div class="services">
 
       <div class="service-card">
-        <img class="svg" src="/img/star.svg" alt="star">
-        <h3>Consultoría Informática</h3>
-        <p>Actividades de consultoría informática y administración de instalaciones informáticas. Ofrecemos asesoramiento especializado para optimizar tus sistemas tecnológicos.</p>
-        <a href="./Archivos/Consultoria.html"> Ver más</a>
-      </div>
-
-      <div class="service-card">
-        <img class="svg" src="/img/settings.svg" alt="star">
+        <span class="card-num">01</span>
+        <div class="card-body">
         <h3>Servicios de TI Especializados</h3>
-        <p>Otras actividades de tecnologías de información y servicios informáticos. Soluciones personalizadas que se adaptan a las necesidades específicas de tu negocio.</p>
-        <a href="./Archivos/Soporte-TI.html">Ver más</a>
+        <p>Los servicios de Tecnologías de la Información son el conjunto de soluciones y actividades que utilizan herramientas tecnológicas para apoyar el funcionamiento y crecimiento de una empresa.</p>
+        <a href="/Archivos/Soporte-TI.html" class="card-link">Ver servicio</a>
+        </div>
       </div>
 
       <div class="service-card">
-        <img class="svg" src="./img/database-zap.svg" alt="star">
+        <span class="card-num">02</span>
+        <div class="card-body">
+        <h3>Consultoría Informática</h3>
+        <p>La consultoría informática es un servicio especializado que analiza, diseña y optimiza soluciones tecnológicas adaptadas a las necesidades de cada compañía, con el objetivo de mejorar su eficiencia, seguridad y competitividad en el entorno digital. En pocas palabras, la consultoría informática busca que la tecnología deje de ser un problema y se convierta en una ventaja para el crecimiento de las empresas.</p>
+        <a href="/Archivos/Consultoria.html" class="card-link">Ver servicio</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="card-num">03</span>
+        <div class="card-body">
         <h3>Procesamiento de Datos</h3>
-        <p>Procesamiento de datos, alojamiento (hosting) y actividades relacionadas. Infraestructura confiable para mantener tus datos seguros y accesibles.</p>
-        <a href="./Archivos/Procesamiento-Datos.html">Ver más</a>
+        <p>El procesamiento de datos consiste en transformar datos en bruto en información útil mediante técnicas de análisis, organización y automatización, permitiendo a las empresas tomar decisiones más eficientes y estratégicas.</p>
+        <a href="/Archivos/Procesamiento-Datos.html" class="card-link">Ver servicio</a>
+        </div>
       </div>
 
       <div class="service-card">
-        <img class="svg" src="./img/code-xml.svg" alt="star"> 
-        <h3>Portales Web</h3>
-        <p>Explotación de portales web que funcionan como centros de información y servicios. Creamos sitios web que conectan tu empresa con tus clientes.</p>
-        <a href="./Archivos/Portal-web.html">Ver más</a>
+        <span class="card-num">04</span>
+        <div class="card-body">
+        <h3>Desarrollo de Portales Web</h3>
+        <p>Los portales web son plataformas en internet que funcionan como puntos de acceso centralizados a información, servicios y recursos digitales.</p>
+        <a href="/Archivos/Portal-web.html" class="card-link">Ver servicio</a>
+        </div>
       </div>
 
       <div class="service-card">
-        <img class="svg" src="./img/bug-play.svg" alt="star">
+        <span class="card-num">05</span>
+        <div class="card-body">
         <h3>Innovación y desarrollo</h3>
-        <p>Investigación y desarrollo de nuevas tecnologías y soluciones. Creación de prototipos y pruebas de concepto. Desarrollo de productos de software y aplicaciones web innovadoras.</p>
-        <a href="./Archivos/Innovación.html">Ver más</a>
+        <p>Su objetivo es generar soluciones más eficientes, modernas y competitivas que respondan a las necesidades del mercado o de las personas.</p>
+        <a href="/Archivos/Innovación.html" class="card-link">Ver servicio</a>
+        </div>
       </div>
 
       <div class="service-card">
-        <img class="svg" src="./img/file-code.svg" alt="star">
+        <span class="card-num">06</span>
+        <div class="card-body">
         <h3>Desarrollo de software</h3>
-        <p>Creación de software a medida para empresas.Desarrollo de soluciones móviles (Aplicación para dispositivos móviles) Integración de sistemas y aplicaciones existentes. Mantenimiento y actualización de software.</p>
-        <a href="./Archivos/Desarrollo.html">Ver más</a>
+        <p>Creación de software a medida para empresas. Desarrollo de soluciones móviles (Aplicación para dispositivos móviles) Integración de sistemas y aplicaciones existentes. Mantenimiento y actualización de software.</p>
+        <a href="/Archivos/Desarrollo.html" class="card-link">Ver servicio</a>
+        </div>
       </div>
-
     </div>
   </section>
+
+  <section class="Metodología">
+    <div class="Meto-content">
+      <img src="img/Metodología.jpg" alt="metodología">
+              <div class="Meto-text">
+                    <h2>Conoce nuestra metodología de Desarrollo</h2>
+
+                    <p>En <strong>Success Technology</strong> trabajamos con una metodología enfocada en la planificación, la eficiencia y la mejora continua, asegurando que cada proyecto cumpla con los objetivos del cliente y los más altos estándares de calidad. Nuestro proceso inicia con un análisis detallado de las necesidades, donde identificamos los requerimientos y definimos una estrategia clara de trabajo. <br><br>
+
+                    Posteriormente, pasamos a la fase de diseño y desarrollo, en la que construimos soluciones tecnológicas funcionales, escalables y adaptadas a cada contexto. Durante todo el proceso mantenemos una comunicación constante con el cliente, lo que nos permite realizar ajustes oportunos y garantizar resultados alineados con sus expectativas. <br><br>
+
+                    Finalmente, realizamos pruebas, implementación y seguimiento, asegurando el correcto funcionamiento de la solución y brindando soporte continuo. Nuestra metodología combina organización, tecnología e innovación para ofrecer resultados confiables y de alto impacto.</p>
+              </div>
+            </div>
+  </section>
+<!-- Metodologías de Desarrollo -->
+  <section class="dev-process">
+  <img src="img/Fases.png" alt="fases">
+
+  <h2>Nuestra metodología de desarrollo</h2>
+  <div class="process-line"></div>
+  <p>Nuestras fases de desarrollo están diseñadas para garantizar un proceso organizado, eficiente y orientado a resultados. Desde el análisis inicial hasta el soporte continuo, cada etapa permite construir soluciones de software de alta calidad, adaptadas a las necesidades del cliente y enfocadas en ofrecer una experiencia óptima y un funcionamiento confiable.</p>
+
+  <div class="process-steps">
+
+    <div class="step" data-step="01">
+      <div class="step-img-wrap">
+        <img src="img/Planificación.png" alt="Planificación">
+      </div>
+      <div class="step-body">
+        <h4>Análisis y planificación</h4>
+        <div class="step-divider"></div>
+        <p>Comprendemos tus necesidades y elaboramos un plan de desarrollo estratégico.</p>
+      </div>
+    </div>
+
+    <div class="step" data-step="02">
+      <div class="step-img-wrap">
+        <img src="img/Diseño.jpg" alt="Diseño">
+      </div>
+      <div class="step-body">
+        <h4>Diseño UX/UI</h4>
+        <div class="step-divider"></div>
+        <p>Diseñamos interfaces modernas centradas en el usuario para garantizar una experiencia óptima.</p>
+      </div>
+    </div>
+
+    <div class="step" data-step="03">
+      <div class="step-img-wrap">
+        <img src="img/Desarrollo.webp" alt="Desarrollo">
+      </div>
+      <div class="step-body">
+        <h4>Desarrollo y programación</h4>
+        <div class="step-divider"></div>
+        <p>Construimos software con tecnologías robustas, código limpio y mejores prácticas del mercado.</p>
+      </div>
+    </div>
+
+    <div class="step" data-step="04">
+      <div class="step-img-wrap">
+        <img src="img/Prueba.jpg" alt="Prueba">
+      </div>
+      <div class="step-body">
+        <h4>Pruebas y calidad</h4>
+        <div class="step-divider"></div>
+        <p>Realizamos pruebas unitarias, funcionales y de rendimiento para asegurar un producto final estable.</p>
+      </div>
+    </div>
+
+    <div class="step" data-step="05">
+      <div class="step-img-wrap">
+        <img src="img/implementación.webp" alt="Implementación">
+      </div>
+      <div class="step-body">
+        <h4>Implementación</h4>
+        <div class="step-divider"></div>
+        <p>Desplegamos el software en entornos seguros garantizando su funcionamiento óptimo.</p>
+      </div>
+    </div>
+
+    <div class="step" data-step="06">
+      <div class="step-img-wrap">
+        <img src="img/soporte.webp" alt="Soporte">
+      </div>
+      <div class="step-body">
+        <h4>Soporte continuo</h4>
+        <div class="step-divider"></div>
+        <p>Ofrecemos mantenimiento, actualizaciones y asistencia técnica cuando lo necesites.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section class="innovacion-descripcion">
+    <div class="innovacion">
+      <div class="innovacion-text">
+       <h2>¿Qué es la Innovación y Desarrollo en Success Technology?</h2>
+       <p>
+        En <strong>Success Technology,</strong> la innovación y el desarrollo representan el motor que impulsa cada solución tecnológica que diseñamos. Entendemos la innovación como la capacidad de transformar ideas en herramientas reales que generen valor para las personas y las empresas, mientras que el desarrollo es el proceso estructurado que permite convertir esas ideas en productos eficientes, escalables y sostenibles. Nuestro enfoque se basa en la mejora continua, la adaptación a nuevas tecnologías y la comprensión profunda de las necesidades del cliente. En Success Technology, no solo creamos software, sino que construimos soluciones inteligentes que optimizan procesos, potencian el crecimiento empresarial y generan ventajas competitivas en un entorno digital en constante evolución.</p>
+      </div>
+        <img src="img/Robot.png" alt="robot">
+    </div>
+    </section>
+
+    <!-- Áreas clave de innovación -->
+<section class="innovacion-areas">
+    <h2>Áreas Clave de Innovación</h2>
+
+    <div class="areas-grid">
+        <div class="area-card">
+            <h3>Automatización Inteligente</h3>
+            <p>Reducimos tiempos y costos mediante la creación de procesos automatizados con IA, bots y sistemas inteligentes.</p>
+        </div>
+
+        <div class="area-card">
+            <h3>Desarrollo de Software</h3>
+            <p>Construimos aplicaciones modernas, seguras y escalables para impulsar tus operaciones digitales.</p>
+        </div>
+
+        <div class="area-card">
+            <h3>Transformación Digital</h3>
+            <p>Te acompañamos en el proceso de migración tecnológica, modernizando tus operaciones y procesos internos.</p>
+        </div>
+
+        <div class="area-card">
+            <h3>Soluciones en la Nube</h3>
+            <p>Implementamos infraestructuras cloud para mayor seguridad, disponibilidad y rendimiento.</p>
+        </div>
+    </div>
+</section>
 
   <!-- Nosotros -->
   <section id="nosotros">
     <div class="about-content">
                 <div class="about-text">
+
                     <h2>Sobre Success Technology</h2>
                     <p>Somos una empresa especializada en el sector tecnológico, comprometida con la innovación y la excelencia en el desarrollo de software y aplicaciones web. Nuestro equipo de expertos trabaja incansablemente para crear soluciones tecnológicas que transformen la manera en que las empresas operan.</p>
                     <p>Con años de experiencia en el mercado, nos hemos consolidado como un socio confiable para organizaciones de todos los tamaños, ofreciendo servicios personalizados que se adaptan a las necesidades específicas de cada cliente.</p>
                     <p>Creemos en el poder de la tecnología para mejorar la productividad, eficiencia y competitividad de nuestros clientes, y trabajamos cada día para hacer que esta visión sea una realidad.</p>
                 </div>
+                <img src="img/Nosotros.png" alt="success">
             </div>
     <h3>Visión</h3>
     <p>
@@ -107,130 +281,71 @@
 
       <!-- Contact Form and Map -->
    
- 
-<section class="contact-section">
-<section id="contact-section">
-    <div class="content-wrapper">
-        <div class="grid">
-            
-<!-- Contact Form -->
-<div>
-    <h2 class="title">Contactanos</h2>
+  <section id="contact-section" class="contact-section">
+  <div class="content-wrapper">
+    <div class="contact-grid">
+      
+      <div class="form-container">
+        <h2 class="title">Contáctanos</h2>
 
-    <div id="success-message" class="success-message">
-        ¡Mensaje enviado con éxito! Te contactaremos pronto.
-    </div>
+        <form id="contact-form" action="https://formsubmit.co/successtechnology454@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5501">
+          <input type="hidden" name="_template" value="box">
 
-    <div id="error-message" class="error-message">
-        Error al enviar el mensaje. Por favor, inténtalo de nuevo.
-    </div>
-
-    <form id="contact-form" class="form-grid"
-          action="https://formsubmit.co/successtechnology454@gmail.com"
-          method="POST">
-
-        <!-- Configuración FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web">
-        <input type="hidden" name="_template" value="box">
-
-        <div class="two-cols">
-            <div>
-                <label for="first-name" class="label">Nombre</label>
-                <input type="text" id="first-name" name="firstName" required class="form-input" placeholder="Tu nombre">
+          <div class="form-row-two">
+            <div class="field">
+              <label for="first-name" class="label">Nombre</label>
+              <input type="text" id="first-name" name="firstName" required class="form-input" placeholder="Tu nombre">
             </div>
-            <div>
-                <label for="last-name" class="label">Apellido</label>
-                <input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Tu apellido">
+            <div class="field">
+              <label for="last-name" class="label">Apellido</label>
+              <input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Tu apellido">
             </div>
-        </div>
+          </div>
 
-        <div>
+          <div class="field">
             <label for="email" class="label">Email</label>
             <input type="email" id="email" name="email" required class="form-input" placeholder="Example@email.com">
-        </div>
+          </div>
 
-        <div>
+          <div class="field">
             <label for="phone" class="label">Teléfono</label>
             <input type="tel" id="phone" name="phone" class="form-input" placeholder="+57 321 456 7890">
-        </div>
+          </div>
 
-        <div>
+          <div class="field">
             <label for="subject" class="label">Asunto</label>
             <select id="subject" name="subject" required class="form-input">
-                <option value="">Selecciona un asunto</option>
-                <option value="consulta">Consultoría Informática</option>
-                <option value="producto">Procesamiento de Datos</option>
-                <option value="soporte">Sitio Web</option>
-                <option value="otro">Otro</option>
+              <option value="">Selecciona un asunto</option>
+              <option value="consulta">Consultoría Informática</option>
+              <option value="producto">Procesamiento de Datos</option>
+              <option value="soporte">Sitio Web</option>
+              <option value="otro">Otro</option>
             </select>
-        </div>
+          </div>
 
-        <div>
+          <div class="field">
             <label for="message" class="label">Mensaje</label>
-            <textarea id="message" name="message" rows="5" required class="form-input textarea" placeholder="Describe tu consulta o pregunta..."></textarea>
-        </div>
+            <textarea id="message" name="message" rows="4" required class="form-input textarea" placeholder="Describe tu consulta..."></textarea>
+          </div>
 
-        <div class="checkbox-row">
+          <div class="checkbox-row">
             <input type="checkbox" id="privacy" name="privacy" required class="checkbox">
-            <label for="privacy" class="checkbox-label">
-                Acepto la política de privacidad y el tratamiento de mis datos
-            </label>
-        </div>
+            <label for="privacy" class="checkbox-label">Acepto la política de privacidad</label>
+          </div>
 
-        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+          <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+      </div>
 
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="http://127.0.0.1:5501">
-    </form>
-</div>
+      <div class="image-container">
+        <img src="img/Jhoimar (1).png" alt="Contacto Success Technology" class="contact-image">
+      </div>
 
-
-            <!-- Map and Store Info -->
-            <div>
-                <h2 class="title">Ubicación</h2>
-
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d245.27680481625416!2d-75.49159658366352!3d10.387470917430425!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1765081525411!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-                <div class="store-info">
-
-                    <div class="info-item">
-                        <div class="icon-circle">
-                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="info-title">Horario de Atención</h4>
-                            <p class="info-text">Lunes a Viernes: 8:00 AM - 7:00 PM</p>
-                            <p class="info-text">Sabado: 10:00 AM - 5:30 PM</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="icon-circle">
-                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="info-title">Servicios Disponibles</h4>
-                            <p class="info-text">• Asesoramiento personalizado</p>
-                            <p class="info-text">• Creamos sitios web</p>
-                            <p class="info-text">• Soluciones personalizadas <br> para tú negocio</p>
-                        </div>
-                    </div> 
-
-                </div>
-            </div>
-        </div>
     </div>
-</section>
-</section>
+  </div>
+  </section>
 
 
   <!-- Pie de página -->
@@ -249,7 +364,9 @@
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#nosotros">Success Technology</a></li>
+          <li><a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a></li>
+          <li><a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></li>
           <li><a href="#contact-section">Contacto</a></li>
         </ul>
       </div>
@@ -281,12 +398,12 @@
     
     <!-- Aviso Legal -->
     <div class="footer-bottom">
-      <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos de Uso</a></p>
+      <p>&copy; 2025 Success Technology - Todos los derechos reservados | <a href="/Archivos/PoliticaPrivacidad.html">Política de Privacidad</a> | <a href="/Archivos/TerminosCondiciones.html">Términos de Uso</a></p>
     </div>
   </div>
 </footer>
 
   <!-- JS -->
-  <script src="/Archivos/Script.js"></script>
+  <script src="/Archivos/Script.js" ></script>
 </body>
 </html>
