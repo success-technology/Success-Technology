@@ -3,6 +3,7 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     overflow-x: hidden;
    }
 
    :root {
@@ -461,12 +462,16 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       header { flex-wrap: wrap; justify-content: center; padding: 1rem; gap: 1rem; }
+
       header img { height: 70px; }
       .terms-layout { grid-template-columns: 1fr; gap: 40px; }
       .terms-sidebar { position: static; }
       .terms-nav { display: flex; flex-wrap: wrap; gap: 8px; border-left: none; border-bottom: 2px solid var(--border-color); padding-bottom: 16px; }
       .terms-nav li a { border-left: none; border-bottom: 2px solid transparent; margin-left: 0; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; }
       .terms-nav li a:hover, .terms-nav li a.active { border-left: none; border-bottom-color: var(--accent-color); padding-left: 12px; background: var(--light-gray); }
+       .submenu-btn{
+         color: var(--white);
+      }
     }
 
     @media (max-width: 768px) {

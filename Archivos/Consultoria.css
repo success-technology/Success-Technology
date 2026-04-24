@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -602,6 +603,10 @@ img {
   .nav-menu.active{
     clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
+  }
+
+  .submenu-btn{
+    color: var(--white);
   }
 
   .nav-menu li{

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -1053,6 +1054,10 @@ img {
     font-size: 1.2rem;
     color: var(--white);
     border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .submenu-btn{
+    color: var(--white);
   }
 
   .nav-menu.active{
