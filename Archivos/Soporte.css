@@ -665,9 +665,9 @@ details[open] summary {
       background: #fff;
     }
 
-    header img {
-    width: 250px;
-    height: auto;
+   header img {
+    width: auto;
+    height: 60px;
   }
 
  .hamburguesa {
@@ -778,9 +778,8 @@ details[open] summary {
     }
 
     .service-hero {
-      margin-top: 100px;
-       padding: 30px 16px;
-       min-height: 35vh;
+      height: 80vh;
+      padding: 1rem;;
     }
 
     .service-hero h1{
@@ -789,6 +788,7 @@ details[open] summary {
 
     .service-hero p{
       font-size: 1.2rem;
+      margin: 0;
     }
 
     .service-intro {

@@ -722,9 +722,9 @@ img {
       background: #fff;
     }
 
-    header img {
-    width: 250px;
-    height: auto;
+   header img {
+    width: auto;
+    height: 60px;
   }
 
 

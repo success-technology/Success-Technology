@@ -476,7 +476,12 @@
 
     @media (max-width: 768px) {
       header { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; }
-      header img { width: 200px; height: auto; }
+
+       header img {
+        width: auto;
+        height: 60px;
+      }
+
       .hamburguesa { display: block; }
       .nav-menu {
         position: fixed; top: 70px; left: 0; width: 100%;

@@ -1035,9 +1035,9 @@ header img {
     padding: 10px 15px;
   }
 
-  header img {
-    width: 200px;
-    height: auto;
+   header img {
+    width: auto;
+    height: 60px;
   }
 
   .hamburguesa { display: block; }

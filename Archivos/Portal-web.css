@@ -183,7 +183,7 @@ img {
 .portalweb-hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* ocupa toda la pantalla */
+    height: 120vh; /* ocupa toda la pantalla */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -347,7 +347,6 @@ img {
 .pw-card:hover h3 {
   color: var(--accent-color);
 }
-
 
 
 /* CTA */
@@ -839,9 +838,9 @@ details[open] summary {
     background: #fff;
   }
 
-  header img {
-    width: 250px;
-    height: auto;
+   header img {
+    width: auto;
+    height: 60px;
   }
 
 
@@ -898,7 +897,7 @@ details[open] summary {
 
 
   .portalweb-hero{
-    margin-top: 100px;
+    margin-top: 10px;
     padding: 30px 16px;
     min-height: 35vh;
   }
