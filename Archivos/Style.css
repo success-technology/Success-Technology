@@ -248,7 +248,7 @@ section, footer, .services, .contact-section {
 }
 
 #servicios h2 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.6rem;
   text-align: center;
   font-size: 2.4rem;
   font-weight: 700;
@@ -283,7 +283,8 @@ section, footer, .services, .contact-section {
   gap: 14px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
+  overflow-y: hidden;
 }
 
 .service-card:nth-child(1) { grid-area: card1; }
