@@ -794,13 +794,18 @@ img {
     }
 
     .hero-dev {
-        margin-top: 70px;
-        padding: 4rem 1rem;
+      height: 70vh;
+      padding: 1rem;
     }
 
     .hero-dev h1 {
-     font-size: 2rem;
+     font-size: 1.8rem;
      }
+
+     .hero-dev p {
+     font-size: 1rem;
+     }
+
 
     .dev-process {
      padding: 3rem 1rem;

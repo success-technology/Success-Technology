@@ -641,12 +641,11 @@ img {
   }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .hero p {
     font-size: 1rem;
-    padding: 0 1rem;
   }
 
   .video-section {

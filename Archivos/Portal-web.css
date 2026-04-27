@@ -897,9 +897,16 @@ details[open] summary {
 
 
   .portalweb-hero{
-    margin-top: 10px;
-    padding: 30px 16px;
-    min-height: 35vh;
+    height: 70vh;
+    padding: 1rem;
+  }
+
+  .portalweb-hero h1{
+    font-size: 1.8rem;
+  }
+
+  .portalweb-hero p{
+    font-size: 1rem;
   }
 
   .cuestion-content img{

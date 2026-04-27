@@ -127,7 +127,6 @@ img {
   padding: 0.5rem 0;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   display: block !important;
-  flex-direction: column;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -924,6 +923,10 @@ details[open] summary {
 
   .hero-innovacion h1{
     font-size: 1.8rem;
+  }
+
+  .hero-innovacion p{
+    font-size: 1;
   }
 
   .innovacion-descripcion h2{

@@ -61,9 +61,8 @@ header.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header img {
-  height: 70px;
-  width: auto;
+img {
+  height: 100px;
 }
 
 /* =============================================
