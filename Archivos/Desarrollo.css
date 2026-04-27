@@ -186,7 +186,8 @@ img {
   padding: 120px 10px;
   text-align: center;
   color: white;
-  margin-top: 110px;
+  margin-top: 70px;
+  min-height: 98vh;
 }
 
 .hero-dev-content h1 {
