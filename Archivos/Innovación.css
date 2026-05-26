@@ -24,42 +24,70 @@
   /* Texto */
   --text-primary:   #0D0D0D;
   --text-secondary: #3D3D5C;
+
+  --background:      #b9b8b8;
+  --background2:     rgb(219, 215, 215);
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: "Tomorrow", sans-serif;
   color: var(--text-primary);
-  background: var(--white);
+  background: #050816;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Luces de fondo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.372), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.285), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(140, 0, 255, 0.301), transparent 30%);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+@keyframes floatBg {
+  from {
+    transform: translate(0,0) scale(1);
+  }
+  to {
+    transform: translate(-40px,20px) scale(1.2);
+  }
 }
 
 /* Header corporativo */
 header {
-  background: var(--white);
-  border-bottom: 1px solid var(--border-color);
+  margin-top:1rem;
+  background: rgba(47, 43, 43, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 20px;
   z-index: 1000;
+  border: 50%;
+  z-index: 1000;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
   transition: box-shadow 0.3s ease;
-  padding: 1rem 0;
+  padding: 0.5rem 2rem;
 }
 
 header.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  max-width: auto;
-  margin: 0 auto;
-  padding: 0.5rem 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 img {
-  height: 100px;;
+  height: 60px;;
 }
 
 /* ===== MENU PRINCIPAL ===== */
@@ -80,21 +108,22 @@ img {
   display: block;
   padding: 1rem 1.5rem;
   text-decoration: none;
-  color: var(--text-primary);
-  font-weight: 500;
-  font-size: 1.15rem;
+  color: var(--background);
+  font-size: 1.5rem;
   transition: all 0.3s ease;
   position: relative;
   background: none;
   border: none;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Hover color */
 .nav-menu a:hover,
 .submenu-btn:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* Línea inferior animada */
@@ -106,7 +135,7 @@ img {
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--background);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -121,7 +150,8 @@ img {
   position: absolute;
   top: 110%;
   left: 0;
-  background: white;
+  background: var(--background);
+  border-radius: 10px;
   width: 300px;
   list-style: none;
   padding: 0.5rem 0;
@@ -180,25 +210,34 @@ img {
 /* Hero Innovación */
 .hero-innovacion {
   background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url("/img/innovación.jpeg") center/cover no-repeat;
-  padding: 110px 24px;
-  text-align: center;
+  padding: 120px 80px;
+  text-align: left;
+  align-items: flex-start;
   color: var(--white);
-  margin-top: 70px; /* separación del header fijo */
-  min-height: 98vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-innovacion h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin-bottom: 1rem;
   margin-top: 4rem;
+  color: var(--background);
 }
 
 .hero-innovacion p {
   font-size: 1.2rem;
   opacity: 0.95;
   max-width: 900px;
-  margin: 0  auto;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--background);
 }
 
 .hero-innovacion h1 {
@@ -220,9 +259,9 @@ img {
 
 
 .innovacion {
-  margin-bottom: 4rem;
-  max-width: 1500px;
-  margin: 0 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 1300px;
+  margin: 0 2rem;
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
@@ -235,26 +274,31 @@ img {
 .innovacion-text h2 {
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--background);
   margin-bottom: 2rem;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .innovacion-text p {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: var(--background);
   margin-bottom: 1.5rem;
   line-height: 1.8;
   max-width: 1200px;
   text-align: justify;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* Img */
 .innovacion img{
-  max-width: 600px;
   flex: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: 80vh;
+  mask-image: linear-gradient(#1a1a2e 80%, transparent);
 }
 
 .innovacion img,
@@ -272,14 +316,13 @@ img {
 /* Áreas de Innovación */
 .innovacion-areas {
   padding: 5rem 2rem;
-  background: var(--white);
   max-width: 1500px;
 }
 
 .innovacion-areas h2 {
   text-align: center;
   font-size: 2.3rem;
-  color: var(--primary-color);
+  color: var(--background);
   margin-bottom: 3rem;
 }
 
@@ -294,7 +337,6 @@ img {
 .area-card {
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
   overflow: hidden;
@@ -332,10 +374,12 @@ img {
 
 .area-card h3 {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--white);
+  color: var(--background);
   margin-bottom: 0.5rem;
   text-align: center;
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .area-card p {
@@ -343,6 +387,9 @@ img {
   line-height: 1.6;
   font-size: 1rem;
   text-align: center;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .area-card h3,
@@ -391,18 +438,25 @@ img {
   max-width: 1500px;
   margin: 0 auto;
   text-align: center;
+  background: var(--background);
 }
 
 .innovacion-beneficios h2 {
   text-align: center;
   font-size: 2.2rem;
   color: var(--primary-color);
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .innovacion-beneficios p {
   margin: 1.5rem 0;
-  color: var(--text-secondary);
+  color: var(--primary-color);
   font-size: 1.1rem;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   line-height: 1.8;
   max-width: 1200px;
   margin-left: auto;
@@ -423,6 +477,9 @@ img {
 .innovacion-beneficios-content h3 {
   text-align: center;
   font-size: 1.5rem;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
@@ -463,9 +520,11 @@ details {
 summary {
   padding: 15px;
   cursor: pointer;
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   list-style: none;
   position: relative;
 }
@@ -495,7 +554,10 @@ details p {
   padding: 15px 15px;
   margin-bottom: 0;
   font-size: 1rem;
-  color: var(--text-secondary);
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--primary-color);
   line-height: 1.6;
   border-top: 1px solid var(--border-color);
 }
@@ -528,7 +590,6 @@ details[open] summary {
 }
 
 
-
 /* CTA */
 .cta-innovacion {
   text-align: center;
@@ -537,7 +598,7 @@ details[open] summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: inset 0 0 0 1300px rgba(0,0,0,0.4);
+  background: var(--background);
 }
 
 .cta-innovacion img{
@@ -552,12 +613,18 @@ details[open] summary {
   font-size: 2.5rem;
   color: var(--primary-color);
   max-width: 600px;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .cta-content p {
   margin: 1rem 0 2rem;
   color: var(--text-secondary);
   font-size: 1.1rem;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .btn-innovacion {
@@ -612,10 +679,11 @@ details[open] summary {
 
 /* Footer corporativo */
 .footer {
-  background: var(--primary-color);
-  color: var(--white);
+  color: var(--background);
   padding: 3rem 2rem 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .container {
@@ -638,8 +706,11 @@ details[open] summary {
 
 .footer-col h3, .footer-col h4 {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   opacity: 0.9;
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .footer-col p {
@@ -658,7 +729,7 @@ details[open] summary {
 }
 
 .footer-col a {
-  color: var(--white);
+  color: var(--background);
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -691,23 +762,20 @@ details[open] summary {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-.social-links img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
-}
-
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.85rem;
+  font-size: 1.2rem;
+   font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   opacity: 0.8;
 }
 
 .footer-bottom a {
-  color: var(--white);
+  color: var(--background);
   text-decoration: none;
   margin: 0 0.5rem;
 }
@@ -745,7 +813,6 @@ details[open] summary {
   transform: translateX(6px);
 }
 
-
 /* ── Keyframes ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(50px); }
@@ -756,73 +823,69 @@ details[open] summary {
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes fadeLeft {
-  from { opacity: 0; transform: translateX(-70px); }
+  from { opacity: 0; transform: translateX(-65px); }
   to   { opacity: 1; transform: translateX(0); }
 }
 @keyframes fadeRight {
-  from { opacity: 0; transform: translateX(70px); }
+  from { opacity: 0; transform: translateX(65px); }
   to   { opacity: 1; transform: translateX(0); }
 }
 @keyframes popIn {
-  from { opacity: 0; transform: scale(0.78) translateY(28px); }
+  from { opacity: 0; transform: scale(0.75) translateY(30px); }
   to   { opacity: 1; transform: scale(1) translateY(0); }
 }
-@keyframes rotateIn {
-  from { opacity: 0; transform: rotate(-8deg) scale(0.9); }
-  to   { opacity: 1; transform: rotate(0deg) scale(1); }
+@keyframes wipeLeft {
+  from { opacity: 1; clip-path: inset(0 100% 0 0); }
+  to   { opacity: 1; clip-path: inset(0 0% 0 0); }
 }
-@keyframes blurIn {
-  from { opacity: 0; filter: blur(12px); transform: scale(1.04); }
-  to   { opacity: 1; filter: blur(0px); transform: scale(1); }
-}
-@keyframes slideReveal {
-  from { opacity: 0; clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
-  to   { opacity: 1; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+@keyframes dropCard {
+  from { opacity: 0; transform: translateY(-30px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes floatImg {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  33%       { transform: translateY(-8px) rotate(0.5deg); }
-  66%       { transform: translateY(-4px) rotate(-0.5deg); }
+  0%, 100% { transform: translateY(0px); }
+  40%       { transform: translateY(-10px); }
+  70%       { transform: translateY(-5px); }
 }
 @keyframes shimmer {
   0%   { left: -100%; }
   100% { left: 160%; }
 }
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(28,218,255,0.3); }
-  50%       { box-shadow: 0 0 20px 8px rgba(28,218,255,0.08); }
+@keyframes tealPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(28,218,255,0.35); }
+  50%       { box-shadow: 0 0 22px 6px rgba(28,218,255,0.07); }
 }
-@keyframes heroBadge {
-  from { opacity: 0; transform: translateY(20px) scale(0.9); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+@keyframes listSlide {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-/* ── Estados iniciales — invisibles hasta que el Observer los activa ── */
+/* ── Estados iniciales ── */
 .anim-up, .anim-down, .anim-left, .anim-right,
-.anim-pop, .anim-rotate, .anim-blur, .anim-reveal {
+.anim-pop, .anim-wipe, .anim-drop, .anim-list {
   opacity: 0;
   will-change: opacity, transform;
 }
-.anim-up     { transform: translateY(50px); }
-.anim-down   { transform: translateY(-40px); }
-.anim-left   { transform: translateX(-70px); }
-.anim-right  { transform: translateX(70px); }
-.anim-pop    { transform: scale(0.78) translateY(28px); }
-.anim-rotate { transform: rotate(-8deg) scale(0.9); }
-.anim-blur   { filter: blur(12px); transform: scale(1.04); }
-.anim-reveal { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); opacity: 1; }
+.anim-up    { transform: translateY(50px); }
+.anim-down  { transform: translateY(-40px); }
+.anim-left  { transform: translateX(-65px); }
+.anim-right { transform: translateX(65px); }
+.anim-pop   { transform: scale(0.75) translateY(30px); }
+.anim-drop  { transform: translateY(-30px) scale(0.95); }
+.anim-list  { transform: translateX(-30px); }
+.anim-wipe  { clip-path: inset(0 100% 0 0); opacity: 1; }
 
-/* ── Disparar al entrar al viewport ── */
-.anim-up.visible     { animation: fadeUp     0.8s  cubic-bezier(0.22,1,0.36,1) forwards; }
-.anim-down.visible   { animation: fadeDown   0.75s cubic-bezier(0.22,1,0.36,1) forwards; }
-.anim-left.visible   { animation: fadeLeft   0.85s cubic-bezier(0.22,1,0.36,1) forwards; }
-.anim-right.visible  { animation: fadeRight  0.85s cubic-bezier(0.22,1,0.36,1) forwards; }
-.anim-pop.visible    { animation: popIn      0.75s cubic-bezier(0.34,1.56,0.64,1) forwards; }
-.anim-rotate.visible { animation: rotateIn   0.8s  cubic-bezier(0.34,1.56,0.64,1) forwards; }
-.anim-blur.visible   { animation: blurIn     0.9s  ease forwards; }
-.anim-reveal.visible { animation: slideReveal 0.9s cubic-bezier(0.22,1,0.36,1) forwards; }
+/* ── Disparar al entrar ── */
+.anim-up.visible    { animation: fadeUp    0.8s  cubic-bezier(0.22,1,0.36,1) forwards; }
+.anim-down.visible  { animation: fadeDown  0.75s cubic-bezier(0.22,1,0.36,1) forwards; }
+.anim-left.visible  { animation: fadeLeft  0.85s cubic-bezier(0.22,1,0.36,1) forwards; }
+.anim-right.visible { animation: fadeRight 0.85s cubic-bezier(0.22,1,0.36,1) forwards; }
+.anim-pop.visible   { animation: popIn     0.75s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.anim-wipe.visible  { animation: wipeLeft  0.95s cubic-bezier(0.22,1,0.36,1) forwards; }
+.anim-drop.visible  { animation: dropCard  0.7s  cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.anim-list.visible  { animation: listSlide 0.65s cubic-bezier(0.22,1,0.36,1) forwards; }
 
-/* ── Delays escalonados ── */
+/* ── Delays ── */
 .d1 { animation-delay: 0.08s !important; }
 .d2 { animation-delay: 0.17s !important; }
 .d3 { animation-delay: 0.26s !important; }
@@ -857,7 +920,6 @@ details[open] summary {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background: #fff;
   }
 
   header img {
@@ -935,7 +997,7 @@ details[open] summary {
 
   .areas-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .innovacion-beneficios-content img, .innovacion img{

@@ -24,42 +24,71 @@
   /* Texto */
   --text-primary:   #0D0D0D;
   --text-secondary: #3D3D5C;
+
+  --background: #b9b8b8;
+  --background2:rgb(219, 215, 215);
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: "Tomorrow", sans-serif;
   color: var(--text-primary);
-  background: var(--white);
+  background: #050816;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Luces de fondo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.372), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.285), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(140, 0, 255, 0.301), transparent 30%);
+  filter: blur(70px);
+  z-index: -1;
+}
+
+@keyframes floatBg {
+  from {
+    transform: translate(0,0) scale(1);
+  }
+  to {
+    transform: translate(-40px,20px) scale(1.2);
+  }
 }
 
 /* Header corporativo */
 header {
-  background: var(--white);
-  border-bottom: 1px solid var(--border-color);
+  margin-top:1rem;
+  background: rgba(47, 43, 43, 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 20px;
   z-index: 1000;
+  border: 50%;
+  z-index: 1000;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
   transition: box-shadow 0.3s ease;
-  padding: 1rem 0;
+  padding: 0.5rem 2rem;
 }
 
 header.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  max-width: auto;
-  margin: 0 auto;
-  padding: 0.5rem 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 img {
-  height: 100px;;
+  height: 60px;;
 }
 
 
@@ -81,21 +110,22 @@ img {
   display: block;
   padding: 1rem 1.5rem;
   text-decoration: none;
-  color: var(--text-primary);
-  font-weight: 500;
-  font-size: 1.15rem;
+  color: var(--background);
+  font-size: 1.5rem;
   transition: all 0.3s ease;
   position: relative;
   background: none;
   border: none;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Hover color */
 .nav-menu a:hover,
 .submenu-btn:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* Línea inferior animada */
@@ -107,7 +137,7 @@ img {
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--background);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -122,7 +152,8 @@ img {
   position: absolute;
   top: 110%;
   left: 0;
-  background: white;
+  background: var(--background);
+  border-radius: 10px;
   width: 300px;
   list-style: none;
   padding: 0.5rem 0;
@@ -183,14 +214,15 @@ img {
 .portalweb-hero {
     position: relative;
     width: 100%;
-    height: 120vh; /* ocupa toda la pantalla */
+    height: 120vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 120px 80px;
+    border-radius: 0 0 50% 0;
   }
 
 /* VIDEO RESPONSIVE */
@@ -214,17 +246,23 @@ img {
 }
 
 .portalweb-hero h1 {
-    color: #fff;
+    color: var(--background2);
     font-size: 3rem;
     max-width: 800px;
     margin-bottom: 20px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .portalweb-hero p {
-    color: #fff;
+    color: var(--background2);
     font-size: 1.2rem;
-    max-width: 1200px;
+    max-width: 750px;
     line-height: 1.6;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .portalweb-hero h1 {
@@ -248,16 +286,22 @@ img {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--background);
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .portalweb p {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto 3rem;
-    color: var(--text-secondary);
+    color: var(--background);
     font-size: 1.1rem;
     text-align: justify;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .portalweb img{
@@ -307,12 +351,18 @@ img {
 }
 
 .pw-card h3 {
-    color: var(--primary-color);
+    color: var(--background);
     margin-bottom: 0.5rem;
+    font-family: "Iceland", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .pw-card p {
-    color: var(--text-secondary);
+    color: var(--background);
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .pw-card {
@@ -348,6 +398,10 @@ img {
   color: var(--accent-color);
 }
 
+.pw-card:hover p{
+  color: var(--primary-color);
+}
+
 
 /* CTA */
 .portalweb-cta {
@@ -358,23 +412,29 @@ img {
 }
 
 .portalweb-cta img{
-  max-width: 400px;
   flex: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .Info-cta h2 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: var(--background);
   text-align: center;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 600px;
 }
 
 .Info-cta p {
   margin: 1rem 0 2rem;
-  color: var(--text-secondary);
+  color: var(--background);
   font-size: 1.1rem;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  max-width: 600px;
 }
 
 .btn-cta {
@@ -409,6 +469,7 @@ img {
   transition: background 0.3s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
               box-shadow 0.3s ease;
   animation: tealPulse 3s ease-in-out infinite;
+
 }
 .btn-cta::before {
   content: '';
@@ -418,6 +479,7 @@ img {
   background: linear-gradient(120deg, transparent, rgba(255,255,255,0.28), transparent);
   animation: shimmer 2.6s ease-in-out infinite;
 }
+
 .btn-cta:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 14px 35px rgba(28,218,255,0.35);
@@ -427,7 +489,7 @@ img {
 
 /* Beneficios */
 .portalweb-benefits {
-    background: var(--light-gray);
+    background: var(--background);
     padding: 5rem 2rem;
 }
 
@@ -435,6 +497,9 @@ img {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .benefits-list {
@@ -442,10 +507,13 @@ img {
     max-width: 900px;
     margin: auto;
     padding: 0;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .benefits-list li {
-    background: white;
+    background: var(--background2);
     padding: 1rem 1.5rem;
     margin-bottom: 1rem;
     border-radius: 10px;
@@ -472,6 +540,7 @@ img {
   margin: 0;
   max-width: 1500;
   align-items: center;
+  background: var(--background);
 }
 
 .cuestion-content {
@@ -489,6 +558,9 @@ img {
   font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .content-lista {
@@ -527,9 +599,11 @@ details {
 summary {
   padding: 15px;
   cursor: pointer;
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   list-style: none;
   position: relative;
 }
@@ -559,7 +633,10 @@ details p {
   padding: 15px 15px;
   margin-bottom: 0;
   font-size: 1rem;
-  color: var(--text-secondary);
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--primary-color);
   line-height: 1.6;
   border-top: 1px solid var(--border-color);
 }
@@ -570,6 +647,7 @@ details p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 15% 60% 25% 40%;
 }
 
 details {
@@ -594,10 +672,11 @@ details[open] summary {
 
 /* Footer corporativo */
 .footer {
-  background: var(--primary-color);
-  color: var(--white);
+  color: var(--background);
   padding: 3rem 2rem 2rem;
-  font-family: 'Arial', sans-serif; /* O usa tu fuente corporativa */
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .container {
@@ -620,8 +699,11 @@ details[open] summary {
 
 .footer-col h3, .footer-col h4 {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   opacity: 0.9;
+  font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .footer-col p {
@@ -640,7 +722,7 @@ details[open] summary {
 }
 
 .footer-col a {
-  color: var(--white);
+  color: var(--background);
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -673,23 +755,20 @@ details[open] summary {
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-.social-links img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1);
-}
-
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.85rem;
+  font-size: 1.2rem;
+   font-family: "Iceland", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   opacity: 0.8;
 }
 
 .footer-bottom a {
-  color: var(--white);
+  color: var(--background);
   text-decoration: none;
   margin: 0 0.5rem;
 }
@@ -835,7 +914,6 @@ details[open] summary {
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
-    background: #fff;
   }
 
    header img {
