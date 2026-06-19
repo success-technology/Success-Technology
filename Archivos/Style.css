@@ -726,8 +726,8 @@ section, footer, .services, .contact-section {
   font-style: normal;
   transform: translateY(28px);
   transition:
-  opacity  0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
-  transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+    opacity  0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
 }
 
 /* Línea decorativa bajo el h2 */
@@ -953,6 +953,7 @@ section, footer, .services, .contact-section {
   margin: 0;
   text-align: left;
 }
+
 
 /* Descripción */
 .innovacion-descripcion {
@@ -2161,7 +2162,7 @@ select.form-input{
   }
 
   .areas-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr);
   }
 
   #nosotros {
