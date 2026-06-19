@@ -211,7 +211,7 @@ img {
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6),
   rgba(0, 0, 0, 0.6)),
-  url("/img/consultoria.png")
+  url("/img/consultoria.webp")
   center/cover no-repeat;
   color: var(--white);
   padding: 120px 80px;

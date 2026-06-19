@@ -329,7 +329,7 @@ section, footer, .services, .contact-section {
 /* ── IMÁGENES DE FONDO ── */
 .service-card:nth-child(1) { background-image: url('/img/Consultoria-inicio.webp'); }
 .service-card:nth-child(2) { background-image: url('/img/TI-inicio.jpg'); }
-.service-card:nth-child(3) { background-image: url('/img/procesamiento-inicio.jpg'); }
+.service-card:nth-child(3) { background-image: url('/img/procesamiento-inicio.webp'); }
 .service-card:nth-child(4) { background-image: url('/img/portal-inicio.webp'); }
 .service-card:nth-child(5) { background-image: url('/img/innivacion-inicio.jpg'); }
 .service-card:nth-child(6) { background-image: url('/img/Desarrollo-inicio'); }
@@ -2162,7 +2162,7 @@ select.form-input{
   }
 
   .areas-grid {
-    grid-template-columns:(1fr);
+    grid-template-columns:1fr;
   }
 
   #nosotros {
