@@ -12,7 +12,7 @@
   --secondary-color: #3D3D5C;
 
   /* 10 % — acento e interacción */
-  --accent-color: #1CDAFF;
+  --accent-color: #201cff;
   --accent2:   #0BBDE0;
   
   /* 60 % — fondos y espacios */
@@ -42,9 +42,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.372), transparent 25%),
-    radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.285), transparent 25%),
-    radial-gradient(circle at 50% 80%, rgba(140, 0, 255, 0.301), transparent 30%);
+    radial-gradient(circle at 20% 30%, rgba(10, 7, 168, 0.372), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(38, 0, 255, 0.285), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(14, 1, 26, 0.301), transparent 30%);
   filter: blur(70px);
   z-index: -1;
 }
